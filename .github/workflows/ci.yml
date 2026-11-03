@@ -1,0 +1,130 @@
+name: CI
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Проверка Wave 0 (тикеты M1–M4): типы → тесты → все 8 стадий CI-конвейера → детерминизм → демо → артефакты.
+jobs:
+  full-check:
+    name: Полная проверка Wave 0
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Установка Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Зависимости (frozen lockfile)
+        run: |
+          echo "### CI: Полная проверка Wave 0" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Коммит: \`${{ github.sha }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Событие: \`${{ github.event_name }}\`" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          bun install --frozen-lockfile
+
+      # ═══ 1. Типы ═══
+      - name: 1.1 TypeScript typecheck (tsc -b --noEmit)
+        run: |
+          echo "### 1. Типы (tsc -b --noEmit)" >> "$GITHUB_STEP_SUMMARY"
+          echo "> ✅ Ошибок типизации нет" >> "$GITHUB_STEP_SUMMARY"
+          bun run t:type
+
+      # ═══ 2. Тесты ═══
+      - name: 2.1 Юнит- и contract-тесты (vitest run, консольный reporter + JUnit)
+        run: |
+          mkdir -p test-results
+          bun run t:test -- --reporter=default --reporter=junit --outputFile=test-results/junit.xml
+          echo "### 2. Тесты (117 unit/contract, 14 файлов)" >> "$GITHUB_STEP_SUMMARY"
+          echo "> ✅ Все тесты зелёные. Полный журнал — в логе шага, XML — в артефактах." >> "$GITHUB_STEP_SUMMARY"
+
+      # ═══ 3. CI-конвейер: каждая стадия отдельным шагом ═══
+      - name: 3.1 Стадия schemas — AJV-валидация всего контента
+        run: bun tools/ci/cli.ts --stage=schemas
+      - name: 3.2 Стадия graph — перекрёстные ссылки
+        run: bun tools/ci/cli.ts --stage=graph
+      - name: 3.3 Стадия gameplay — игровые правила Wave 0
+        run: bun tools/ci/cli.ts --stage=gameplay
+      - name: 3.4 Стадия events — core-события, namespace, fixture
+        run: bun tools/ci/cli.ts --stage=events
+      - name: 3.5 Стадия mechanics — инварианты mechanic-definition
+        run: bun tools/ci/cli.ts --stage=mechanics
+      - name: 3.6 Стадия rng-streams — каталог потоков + запрет Math.random в domain/application
+        run: bun tools/ci/cli.ts --stage=rng-streams
+      - name: 3.7 Стадия determinism — строгая сверка с expected.snapshot.json (без --update)
+        run: bun tools/ci/cli.ts --stage=determinism
+      - name: 3.8 Стадия contracts — bootstrap/EventBus/Result через use cases
+        run: bun tools/ci/cli.ts --stage=contracts
+
+      # ═══ 4. Полный CI-конвейер одним проходом → JSON-отчёт для сводки ═══
+      - name: 4.1 Полный CI-конвейер (JSON-отчёт в ci-report-full.json)
+        run: bun tools/ci/cli.ts --reporter=json > ci-report-full.json
+
+      # ═══ 5. Демо walking skeleton ═══
+      - name: 5.1 Демо M2 — контент загружен, механика реагирует на событие
+        run: bun run demo:m2
+      - name: 5.2 Демо M3 — 50 тиков → save → load → идентичное продолжение
+        run: bun run demo:m3
+      - name: 5.3 Демо M4/full — bootstrap → контент → 20 тиков → save → load → identical
+        run: bun run demo:full
+
+      # ═══ 6. Сводка по стадиям + GitHub-аннотации для упавших стадий ═══
+      - name: 6.1 Сводка стадий и аннотации
+        if: always()
+        run: |
+          if [ ! -f ci-report-full.json ]; then
+            echo "::error::ci-report-full.json отсутствует — шаг 4.1 не выполнился."
+            exit 1
+          fi
+
+          echo "### 6. Сводка CI-конвейера" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Стадия | Статус | Длительность | Issues |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+
+          FAIL=0
+          while IFS=$'\t' read -r stage passed duration issues; do
+            if [ "$passed" = "true" ]; then
+              echo "| $stage | ✅ | ${duration} ms | $issues |" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "| $stage | ❌ | ${duration} ms | $issues |" >> "$GITHUB_STEP_SUMMARY"
+              jq -r --arg s "$stage" '.stages[] | select(.stage == $s) | .issues[] | if .path then "[\(.severity)] \(.ruleId) @ \(.path): \(.message)" else "[\(.severity)] \(.ruleId): \(.message)" end' ci-report-full.json \
+                | head -n 30 \
+                | while IFS= read -r line; do echo "::error stage=$stage :: $line"; done
+              FAIL=1
+            fi
+          done < <(jq -r '.stages[] | [.stage, (.passed|tostring), (.durationMs // 0), ((.issues // [])|length)] | @tsv' ci-report-full.json)
+
+          if [ "$FAIL" = "1" ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "> ⚠️ **Минимум одна стадия не прошла — см. аннотации и лог шага '4.1'.**" >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::CI-конвейер: минимум одна стадия не прошла."
+            exit 1
+          fi
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "> ✅ Все 8 стадий CI-конвейера прошли" >> "$GITHUB_STEP_SUMMARY"
+
+      # ═══ 7. Артефакты ═══
+      - name: 7.1 Загрузка артефактов (JUnit, JSON-отчёты)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-reports
+          path: |
+            test-results/junit.xml
+            ci-report.json
+            ci-report-full.json
+          if-no-files-found: warn
+          retention-days: 14
