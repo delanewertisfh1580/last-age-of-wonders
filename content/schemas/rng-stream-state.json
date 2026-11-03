@@ -1,0 +1,14 @@
+{
+  "$id": "rng-stream-state",
+  "type": "object",
+  "required": ["algorithm", "s0", "s1", "s2", "s3", "callCount"],
+  "properties": {
+    "algorithm": { "const": "xor-shift-128-plus" },
+    "s0": { "type": "string", "pattern": "^[0-9a-f]+$" },
+    "s1": { "type": "string", "pattern": "^[0-9a-f]+$" },
+    "s2": { "type": "string", "pattern": "^[0-9a-f]+$" },
+    "s3": { "type": "string", "pattern": "^[0-9a-f]+$" },
+    "callCount": { "type": "integer", "minimum": 0 }
+  },
+  "additionalProperties": true
+}

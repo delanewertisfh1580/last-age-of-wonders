@@ -1,0 +1,10 @@
+{
+  "$id": "clock-config",
+  "type": "object",
+  "required": ["tickIntervalMs"],
+  "properties": {
+    "tickIntervalMs": { "type": "integer", "minimum": 1 },
+    "maxTicksPerFrame": { "type": ["integer", "null"], "minimum": 0 }
+  },
+  "additionalProperties": true
+}

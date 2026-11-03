@@ -1,0 +1,1 @@
+{"rngState":{"rng.combat.damage":{"algorithm":"xor-shift-128-plus","s0":"e9ca1591","s1":"f96efce2","s2":"b087e15f","s3":"86a9bac9","callCount":100}},"mechanicRuntimeState":{"states":{"stub-counter-tracker":{"count":100}},"active":["stub-counter-tracker"]}}

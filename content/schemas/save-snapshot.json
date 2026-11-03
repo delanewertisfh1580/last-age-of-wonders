@@ -1,0 +1,44 @@
+{
+  "$id": "save-snapshot",
+  "type": "object",
+  "required": [
+    "formatVersion",
+    "savedAtMs",
+    "contentHash",
+    "rngState",
+    "mechanicRuntimeState",
+    "domainStates",
+    "eventQueueState",
+    "completedCombatsJournal",
+    "completedCataclysmsJournal",
+    "epilogueEventsJournal",
+    "transformationEventsJournal",
+    "narrativeEventsJournal",
+    "partyEventsJournal"
+  ],
+  "properties": {
+    "formatVersion": { "const": 1 },
+    "savedAtMs": { "type": "integer" },
+    "contentHash": { "type": "string", "pattern": "^[a-f0-9]{64}$|^in-memory-stub$" },
+    "rngState": { "type": "object" },
+    "mechanicRuntimeState": { "type": "object" },
+    "domainStates": { "type": "object" },
+    "eventQueueState": {
+      "type": "object",
+      "required": ["nextTick", "afterScene", "warning"],
+      "properties": {
+        "nextTick": { "type": "array" },
+        "afterScene": { "type": "array" },
+        "warning": { "type": "array" }
+      },
+      "additionalProperties": true
+    },
+    "completedCombatsJournal": { "type": "array" },
+    "completedCataclysmsJournal": { "type": "array" },
+    "epilogueEventsJournal": { "type": "array" },
+    "transformationEventsJournal": { "type": "array" },
+    "narrativeEventsJournal": { "type": "array" },
+    "partyEventsJournal": { "type": "array" }
+  },
+  "additionalProperties": true
+}

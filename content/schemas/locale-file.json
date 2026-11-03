@@ -1,0 +1,13 @@
+{
+  "$id": "locale-file",
+  "type": "object",
+  "required": ["locale", "translations"],
+  "properties": {
+    "locale": { "type": "string", "pattern": "^[a-z]{2}(-[A-Z]{2})?$|^[a-z]{2}-[A-Z]{2}$" },
+    "translations": {
+      "type": "object",
+      "additionalProperties": { "type": ["string", "object"] }
+    }
+  },
+  "additionalProperties": true
+}

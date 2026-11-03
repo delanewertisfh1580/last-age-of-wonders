@@ -1,0 +1,36 @@
+{
+  "$id": "mechanic-definition",
+  "type": "object",
+  "required": ["id", "kind", "consumes", "emits", "params", "priority", "lifecycle", "validationRules", "roleTags"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z][a-z0-9_-]*$" },
+    "kind": { "enum": ["resolver", "tracker"] },
+    "factionTags": { "type": "array", "items": { "type": "string" } },
+    "branchTags": { "type": "array", "items": { "type": "string" } },
+    "shipClassTags": { "type": "array", "items": { "type": "string" } },
+    "facetTags": { "type": "array", "items": { "type": "string" } },
+    "roleTags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "params": { "type": "object" },
+    "consumes": { "type": "array", "items": { "type": "string" } },
+    "emits": { "type": "array", "items": { "type": "string" } },
+    "stateSchema": { "type": ["object", "null"] },
+    "counterplayTags": { "type": "array", "items": { "type": "string" } },
+    "validationRules": {
+      "type": "object",
+      "required": ["paramsSchema"],
+      "properties": { "paramsSchema": { "type": "object" } },
+      "additionalProperties": true
+    },
+    "priority": { "type": "integer" },
+    "lifecycle": {
+      "type": "object",
+      "required": ["scope", "persisted"],
+      "properties": {
+        "scope": { "enum": ["ship", "companion", "party", "combat", "captain", "narrative", "visual", "cataclysm", "economy", "epilogue", "world"] },
+        "persisted": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

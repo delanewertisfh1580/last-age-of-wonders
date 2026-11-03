@@ -1,0 +1,38 @@
+{
+  "$id": "validation-report",
+  "type": "object",
+  "required": ["stages", "passed"],
+  "properties": {
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage", "passed", "issues"],
+        "properties": {
+          "stage": { "type": "string" },
+          "passed": { "type": "boolean" },
+          "durationMs": { "type": ["number", "null"] },
+          "issues": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["ruleId", "severity", "message"],
+              "properties": {
+                "ruleId": { "type": "string" },
+                "severity": { "enum": ["error", "warning"] },
+                "message": { "type": "string" },
+                "path": { "type": "string" },
+                "meta": { "type": ["object", "null"] }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "passed": { "type": "boolean" },
+    "generatedAtMs": { "type": ["integer", "null"] }
+  },
+  "additionalProperties": true
+}

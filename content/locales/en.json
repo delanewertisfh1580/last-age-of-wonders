@@ -1,0 +1,13 @@
+{
+  "locale": "en-US",
+  "translations": {
+    "mechanic.stub-tick-logger-resolver.name": "Tick Logger",
+    "mechanic.stub-tick-logger-resolver.desc": "Logs every world tick (stub).",
+    "mechanic.stub-counter-tracker.name": "Tick Counter",
+    "mechanic.stub-counter-tracker.desc": "Counts world ticks (stub).",
+    "mechanic.stub-event-counter-resolver.name": "Combat Event Counter",
+    "mechanic.stub-event-counter-resolver.desc": "Counts combat events (stub).",
+    "event.world.tick_advanced.description": "World tick advanced.",
+    "event.combat.started.description": "Combat has started."
+  }
+}

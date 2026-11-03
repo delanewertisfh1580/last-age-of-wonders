@@ -1,0 +1,12 @@
+{
+  "shader_graph_id": "shaderGraph",
+  "mechanic_ids": "mechanic",
+  "scar_ids": "nodeScar",
+  "event_id": "event",
+  "faction_id": "faction",
+  "doctrine_id": "doctrine",
+  "companion_id": "companion",
+  "captain_id": "captain",
+  "transformation_tree_id": "transformationTree",
+  "story_beacon_id": "storyBeacon"
+}

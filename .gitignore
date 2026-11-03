@@ -1,0 +1,5 @@
+node_modules/
+dist/
+ci-report.json
+coverage/
+*.log

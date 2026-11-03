@@ -1,0 +1,12 @@
+{
+  "$id": "event-definition",
+  "type": "object",
+  "required": ["type"],
+  "properties": {
+    "type": { "type": "string", "pattern": "^[a-z][a-z0-9_-]*(\\.[a-z0-9_-]+)+$" },
+    "source": { "enum": ["core", "faction_extension", "mechanic"] },
+    "description": { "type": "string" },
+    "payloadSchema": { "type": ["object", "null"] }
+  },
+  "additionalProperties": true
+}

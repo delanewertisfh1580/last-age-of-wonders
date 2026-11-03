@@ -1,0 +1,18 @@
+{
+  "packs": [
+    {
+      "id": "core-events",
+      "version": "1.0.0",
+      "kinds": ["event"],
+      "files": ["events/core.json"],
+      "dependencies": []
+    },
+    {
+      "id": "core-mechanics",
+      "version": "1.0.0",
+      "kinds": ["mechanic"],
+      "files": ["mechanics/stubs.json"],
+      "dependencies": ["core-events"]
+    }
+  ]
+}

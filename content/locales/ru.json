@@ -1,0 +1,13 @@
+{
+  "locale": "ru-RU",
+  "translations": {
+    "mechanic.stub-tick-logger-resolver.name": "Логгер тиков",
+    "mechanic.stub-tick-logger-resolver.desc": "Логирует каждый мировой тик (заглушка).",
+    "mechanic.stub-counter-tracker.name": "Счётчик тиков",
+    "mechanic.stub-counter-tracker.desc": "Считает мировые тики (заглушка).",
+    "mechanic.stub-event-counter-resolver.name": "Счётчик боевых событий",
+    "mechanic.stub-event-counter-resolver.desc": "Считает боевые события (заглушка).",
+    "event.world.tick_advanced.description": "Мир продвинулся на тик.",
+    "event.combat.started.description": "Комбат начался."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "description": "Fixture с фиксированным сценарием для стадии determinism (TKT-M4-010): сид, число тиков и вызовы RNG/событий на тик.",
+  "seed": "ci-test",
+  "ticks": 100,
+  "rngCallsPerTick": 1,
+  "combatEventsPerTick": 1
+}

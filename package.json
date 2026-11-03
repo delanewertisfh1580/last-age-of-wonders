@@ -1,0 +1,27 @@
+{
+  "name": "nvm-w0",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "t:type": "tsc -b --noEmit",
+    "t:test": "vitest run",
+    "t:check": "bun run t:type && bun run t:test",
+    "ci:validate": "bun tools/ci/cli.ts",
+    "ci:validate:json": "bun tools/ci/cli.ts --reporter=json",
+    "ci:validate:update": "bun tools/ci/cli.ts --update",
+    "demo:m2": "bun scripts/demo-m2.ts",
+    "demo:m3": "bun scripts/demo-m3.ts",
+    "demo:full": "bun scripts/demo-full.ts"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@vitest/ui": "^5.0.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
