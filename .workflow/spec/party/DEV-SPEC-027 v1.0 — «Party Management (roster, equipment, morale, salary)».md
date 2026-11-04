@@ -75,9 +75,9 @@
 | `SPEC-PARTY-030…032` (события и мосты) | §6.4, §9.3 | см. п.1–2 ниже |
 | `SPEC-PARTY-040/041` (детерминизм, RNG) | §7.4, R13/R17 | нет |
 | `SPEC-PARTY-050/051` (сохранения, валидация загрузки) | §5.4, §8.3, R14 | нет |
-| `SPEC-PARTY-060…063` (валидация) | §12.6/T15-T16, R15 | нет |
+| `SPEC-PARTY-060…063` (валидация) | §12/T15-T16, R15 | нет |
 | `SPEC-PARTY-070/071` (скелеты первой волны) | пакет `party-core`, R16 | нет |
-| `SPEC-PARTY-080` (вертикальный срез) | §12.5 demo:m8, R16 | нет |
+| `SPEC-PARTY-080` (вертикальный срез) | §11-R16/§12-T14 demo:m8, R16 | нет |
 | `GD-07/GD-08` (контент как данные) | §4, §6 | нет |
 | `GD-09` (Memento) | §5.4 | нет |
 | `INT-21/22/30/33.5` | весь документ | нет |
@@ -102,7 +102,7 @@
 | `DEV-SPEC-004` | `MechanicDefinition` (scopes `party`/`companion` уже в `MechanicScope` Wave 0), `IMechanicRuntime`, правила resolver/tracker |
 | `DEV-SPEC-005` | `IRngService`, именованные потоки, rng-streams CI |
 | `DEV-SPEC-006` | `IMementoProvider(domainId)`, композиция save-snapshot, валидация при загрузке |
-| `DEV-SPEC-007` | `TickPhase = 'scope:party'` (уже в перечне Wave 0), `IGameClock`, порядок скоупов |
+| `DEV-SPEC-007` | `TickPhase = 'scope:party'` и `MechanicScope 'party'|'companion'` (уже в Wave 0), `IGameClock`, `TickScheduler` (эмит `world.tick_advanced`, затем `runtime.tickScope(scope)` по порядку скоупов) |
 | `DEV-SPEC-020` | `ITradeService` (покупка экипировки, списания казны), `ICargoCapacityPort`, события `economy.expense_recorded`/`economy.item_acquired` |
 
 ### 2.2. Мягкие
@@ -117,7 +117,7 @@
 
 ### 2.3. Внешние
 
-Новых npm-зависимостей нет: `ajv` (схемы), `vitest` (тесты), рантайм Bun/Node как в Wave 0. Запреты: `Math.random`, `Date.now` в `src/domain/party/**` и `src/application/party/**` (CI-стадия rng-streams, расширение каталогов — §12.6 T13).
+Новых npm-зависимостей нет: `ajv` (схемы), `vitest` (тесты), рантайм Bun/Node как в Wave 0. Запреты: `Math.random`, `Date.now` в `src/domain/party/**` и `src/application/party/**` (CI-стадия rng-streams, расширение каталогов — §12 T13).
 
 ---
 
@@ -431,15 +431,15 @@ export interface PartyInstance {
 
 | id | kind | lifecycle.scope | priority | consumes | emits | state_schema |
 |---|---|---|---|---|---|---|
-| `party-morale-tracker` | tracker | party | 300 | `world.tick_advanced`, `party.companion_mood_changed`, `party.companion_scar_applied`, `party.salary_overdue` | `party.morale_changed` | `{ last_decay_tick }` |
-| `party-maintenance-charger` | tracker | party | 200 | `world.tick_advanced` | `party.maintenance_charged` | `{ last_charged_tick }` |
-| `party-salary-scheduler` | tracker | party | 100 | `world.tick_advanced`, `party.salary_paid` | `party.salary_paid`, `party.salary_overdue`, `party.desertion_risk_elevated` | `{ next_due_tick }` |
+| `party-morale-tracker` | tracker | party | 300 | tick(`scope:party`) + `party.companion_mood_changed`, `party.companion_scar_applied`, `party.salary_overdue` | `party.morale_changed` | `{ last_decay_tick }` |
+| `party-maintenance-charger` | tracker | party | 200 | tick(`scope:party`) | `party.maintenance_charged` | `{ last_charged_tick }` |
+| `party-salary-scheduler` | tracker | party | 100 | tick(`scope:party`), `party.salary_paid` | `party.salary_paid`, `party.salary_overdue`, `party.desertion_risk_elevated` | `{ next_due_tick }` |
 | `party-reaction-resolver` | resolver | party | 400 | `cataclysm.effect_applied`, `combat.encounter_resolved`, `world.event_occurred`, `economy.price_shock` | `party.reaction_triggered`, `party.companion_mood_changed`, `party.companion_scar_applied` | `null` |
 | `party-progression-resolver` | resolver | party | 350 | `party.companion_action_executed`, `combat.duel_action_executed` | `party.companion_skill_improved` | `null` |
 | `companion-steam-pressure-boost-resolver` | resolver | companion | 100 | `combat.duel_action_executed`, `party.companion_action_executed` | `party.companion_pressure_boosted` | `null` |
-| `companion-steam-repair-tracker` | tracker | companion | 90 | `world.tick_advanced`, `party.companion_action_executed` | `party.companion_repair_ready` | `{ repair_charges, last_used_tick }` |
+| `companion-steam-repair-tracker` | tracker | companion | 90 | tick(`scope:companion`), `party.companion_action_executed` | `party.companion_repair_ready` | `{ repair_charges, last_used_tick }` |
 
-Правила: persisted-состояния companion-трекеров живут в `CompanionInstance.tracker_states` и персистятся общим memento (отдельного провайдера нет); резолверы не имеют persisted state (INV 004); `role_tags` companion-механик ⊇ `['companion']`; namespace событий механик — `party.*` (SPEC-PARTY-012/023). Локальная тема `party.tick_advanced` не вводится — механики слушают `world.tick_advanced` (решение по alias — OQ-04).
+Правила: persisted-состояния companion-трекеров живут в `CompanionInstance.tracker_states` и персистятся общим memento (отдельного провайдера нет); резолверы не имеют persisted state (INV 004); `role_tags` companion-механик ⊇ `['companion']`; namespace событий механик — `party.*` (SPEC-PARTY-012/023). Колонка consumes описывает **реактивности на события**; тактовое исполнение party-механик происходит по вызову `IMechanicRuntime.tickScope('party')` из `TickScheduler` (DEV-SPEC-007), а не по подписке на `world.tick_advanced`. Тема `party.tick_advanced` как отдельная ядерная тема не вводится.
 
 ### 6.2. JSON Schema (`content/schemas/`)
 
@@ -543,7 +543,7 @@ BuyEquipment({companion_id, equipment_id, market_node_id})
 
 **(c) Такт содержания/зарплаты (фаза `scope:party`):**
 ```
-world.tick_advanced(t)
+tick t → TickScheduler: publish world.tick_advanced → runtime.tickScope('party')
   → party-maintenance-charger: accrued += Σ maintenance.cost_per_tick → party.maintenance_charged
   → party-salary-scheduler: t == salary_due_tick ?
       да → попытка оплаты Σ salary.amount из казны [020 wallet]
@@ -568,7 +568,7 @@ cataclysm.effect_applied{node_id, effect_tags}
 
 ### 7.3. Tick-контракт
 
-Фаза `scope:party` (значение `TickPhase` уже в Wave 0), позиция после `scope:economy` и `scope:cataclysm`, до `scope:combat` — боевые системы видят актуальную мораль того же такта (029 читает `GetPartyStatus`). Внутри фазы — очередь механик по убыванию priority, tie-breaker id (INV-10 004). Бюджет такта — контракт `TickBudgetPort` (цифры — DEV-SPEC-016). Пропуск фазы (LOD) допустим только для maintenance/scheduler-механик с детерминированным догоном по числу пропущенных тактов (курсоры `last_charged_tick`/`next_due_tick` в state трекеров).
+Тактовая фаза `scope:party`: `TickScheduler` (007) после публикации `world.tick_advanced` вызывает `IMechanicRuntime.tickScope(scope)` по фиксированному порядку скоупов (`world → economy → cataclysm → party → combat → …`); партия находится после economy/cataclysm и до combat — боевые системы видят актуальную мораль того же такта (029 читает `GetPartyStatus`). Внутри вызова — очередь механик scope `party` по убыванию priority, tie-breaker id (INV-10 004); companion-трекеры получают `tickScope('companion')` позже (фаза combat-скоупа, 029) и обязаны быть корректны при отсутствии party-данных ещё в этом такте. Бюджет такта — контракт `TickBudgetPort` (цифры — DEV-SPEC-016). Пропуск фазы (LOD) допустим только для maintenance/scheduler-механик с детерминированным догоном по числу пропущенных тактов (курсоры `last_charged_tick`/`next_due_tick` в state трекеров).
 
 ### 7.4. Идемпотентность и детерминизм
 
@@ -656,7 +656,7 @@ export interface IEpilogueFactPort {
 
 | Topic | Реакция | Канал |
 |---|---|---|
-| `world.tick_advanced` | драйвер maintenance/salary/mood-decay | фаза scope:party |
+| `world.tick_advanced` | наблюдение номера тика (курсоры трекеров); сам такт — через `tickScope('party')` | фаза world-tick-advance → scope:party |
 | `cataclysm.effect_applied` | reaction-rules (mood/scar/fact) | event-loop (resolver) |
 | `combat.encounter_started` / `combat.encounter_resolved` | буфер прогрессии; потери → wounded/died; мораль-делта | event-loop |
 | `fleet.ship_acquired` / `fleet.ship_lost` | emit `party.ship_changed`, пересчёт personnel-лимита | event-loop |
@@ -840,7 +840,7 @@ Invariant: PARTY-INV-06…11.
 | OQ-01 | Поправка DESIGN SPEC-PARTY-032 (имена мостовых событий, §1.3 п.1) | нет (спека нормативна) | design | до review Wave 5 |
 | OQ-02 | Полная семантика конверсии пленных — объём 028 | нет | arch | при генерации 028 |
 | OQ-03 | Источник ранений до выхода 029 (proxy `combat.encounter_resolved`) — подтвердить контрактом 029 | TKT-M8-016 (мост-тесты) частично | arch | до Wave 5 review |
-| OQ-04 | Вводить ли ядерную тему `party.tick_advanced` вместо прямого consumption `world.tick_advanced` | нет | arch | до Wave 5 |
+| OQ-04 | ~~Вводить ли ядерную тему `party.tick_advanced`~~ — закрыто при сверке с кодом Wave 0: тактовое исполнение идёт через `TickScheduler → IMechanicRuntime.tickScope('party')`, отдельная тема не вводится (§6.1, §7.3) | нет | arch | закрыто 2026-11-04 |
 | OQ-05 | Нелинейные (ветвящиеся) личные арки — перенести формализм в 034 | нет | design | до Wave 6 |
 | OQ-06 | Локационный фильтр реакций (напарник рядом с узлом катаклизма) зависит от world-position контракта 023 | AC17 partial-реализация | arch | до Wave 5 review |
 | OQ-07 | Передача владельца `IEpilogueFactPort` в 036 (сейчас owner-стаб в 027; прецедент Q-01 020) | нет | arch | при генерации 036 |
