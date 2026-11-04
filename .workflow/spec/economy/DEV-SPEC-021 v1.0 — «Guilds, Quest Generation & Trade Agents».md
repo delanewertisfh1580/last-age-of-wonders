@@ -447,7 +447,7 @@ sequenceDiagram
 | `OATH_ALREADY_SWORN` | вторая присяга |
 | `QUEST_BOARD_FULL` | превышение лимита контрактов |
 | `QUEST_NOT_ACCEPTABLE` | шрам-блок/template-условие не выполнено |
-| `AGENT_NOT_UNLOKC` | агент не открыт (unlock_policy failed) |
+| `AGENT_NOT_UNLOCK` | агент не открыт (unlock_policy failed) |
 | `AGENT_BUSY` | бес свободных слотов поручений |
 | `GUILD_CREDIT_INSUFFICIENT` | не хватает guild-credit |
 
