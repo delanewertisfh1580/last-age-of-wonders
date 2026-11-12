@@ -121,6 +121,8 @@ function printTrace(id: string, t: ParsedTicket | undefined, g: TraceGraph) {
 
 // ─── Артефакты ───────────────────────────────────────────────────────────────
 
+const BASE_PATH = process.env.TRACE_BASE_PATH ?? ''; // например '/nvm-w0' для GitHub Pages из подпадки
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, 'graph.json'), JSON.stringify(graph, null, 2));
 writeFileSync(join(outDir, 'index.html'), renderHtml(tree, graph, focusTicket));

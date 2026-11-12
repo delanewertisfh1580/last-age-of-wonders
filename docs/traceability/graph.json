@@ -588,6 +588,2426 @@
           "GD-17"
         ]
       }
+    },
+    {
+      "id": "TKT-M1-001",
+      "kind": "ticket",
+      "label": "TKT-M1-001 · Brand & EntityId types",
+      "sub": "M1 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-002",
+      "kind": "ticket",
+      "label": "TKT-M1-002 · Result type + helpers",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [
+          "AC04",
+          "AC05"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-003",
+      "kind": "ticket",
+      "label": "TKT-M1-003 · AppError hierarchy",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-004",
+      "kind": "ticket",
+      "label": "TKT-M1-004 · Logger + PinoLogger + NoopLogger",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-005",
+      "kind": "ticket",
+      "label": "TKT-M1-005 · AppConfig + zod schema + app-config.json",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-006",
+      "kind": "ticket",
+      "label": "TKT-M1-006 · DependencyContainer + GameBootstrap + main.ts",
+      "sub": "M1 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R03",
+          "R04"
+        ],
+        "acs": [
+          "AC06",
+          "AC07",
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-007",
+      "kind": "ticket",
+      "label": "TKT-M1-007 · EventType + DomainEvent + DeliveryPolicy types",
+      "sub": "M1 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-008",
+      "kind": "ticket",
+      "label": "TKT-M1-008 · EventDefinition type + JSON Schema",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-009",
+      "kind": "ticket",
+      "label": "TKT-M1-009 · EventRegistry interface + impl",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-010",
+      "kind": "ticket",
+      "label": "TKT-M1-010 · IEventBus + InMemoryEventBus (publish/subscribe)",
+      "sub": "M1 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-011",
+      "kind": "ticket",
+      "label": "TKT-M1-011 · EventPayloadValidator + интеграция с publish",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [
+          "AC03",
+          "AC04"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-012",
+      "kind": "ticket",
+      "label": "TKT-M1-012 · DeliveryPolicy queues + drainQueue",
+      "sub": "M1 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-013",
+      "kind": "ticket",
+      "label": "TKT-M1-013 · Handler priority + isolation",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-014",
+      "kind": "ticket",
+      "label": "TKT-M1-014 · RecordingEventBus (тест-адаптер)",
+      "sub": "M1 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-015",
+      "kind": "ticket",
+      "label": "TKT-M1-015 · content/events/core.json — 30 core-событий",
+      "sub": "M1 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC10",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-016",
+      "kind": "ticket",
+      "label": "TKT-M1-016 · Минимальный events validator (script)",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC10",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-017",
+      "kind": "ticket",
+      "label": "TKT-M1-017 · Contract-тесты: все core-события валидны",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05"
+        ],
+        "acs": [
+          "AC01",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M1-018",
+      "kind": "ticket",
+      "label": "TKT-M1-018 · M1 демо: bootstrap + publish + handler",
+      "sub": "M1 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M1 v1.0 — «Bootstrap + EventBus».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R03",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC05",
+          "AC06",
+          "AC07",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-001",
+      "kind": "ticket",
+      "label": "TKT-M2-001 · ContentKind type + все 64 значения",
+      "sub": "M2 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-002",
+      "kind": "ticket",
+      "label": "TKT-M2-002 · ContentPack type + loader (topo sort)",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-003",
+      "kind": "ticket",
+      "label": "TKT-M2-003 · AjvSchemaValidator",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-004",
+      "kind": "ticket",
+      "label": "TKT-M2-004 · 7–10 базовых JSON Schema",
+      "sub": "M2 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-005",
+      "kind": "ticket",
+      "label": "TKT-M2-005 · JsonContentRegistry.loadAll",
+      "sub": "M2 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC04",
+          "AC05"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-006",
+      "kind": "ticket",
+      "label": "TKT-M2-006 · CrossReferenceValidator",
+      "sub": "M2 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC06",
+          "AC07",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-007",
+      "kind": "ticket",
+      "label": "TKT-M2-007 · ContentHasher (SHA-256)",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-008",
+      "kind": "ticket",
+      "label": "TKT-M2-008 · Hot reload (dev only)",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-009",
+      "kind": "ticket",
+      "label": "TKT-M2-009 · InMemoryContentRegistry (тест)",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-010",
+      "kind": "ticket",
+      "label": "TKT-M2-010 · MechanicDefinition type + JSON Schema",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-011",
+      "kind": "ticket",
+      "label": "TKT-M2-011 · MechanicContext type",
+      "sub": "M2 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-012",
+      "kind": "ticket",
+      "label": "TKT-M2-012 · IMechanicPlugin + базовый класс",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R04",
+          "R05"
+        ],
+        "acs": [
+          "AC10",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-013",
+      "kind": "ticket",
+      "label": "TKT-M2-013 · MechanicRegistry interface + impl",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-014",
+      "kind": "ticket",
+      "label": "TKT-M2-014 · StateSchemaValidator",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-015",
+      "kind": "ticket",
+      "label": "TKT-M2-015 · MechanicRuntime.dispatchEvent",
+      "sub": "M2 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC04",
+          "AC05",
+          "AC06",
+          "AC07",
+          "AC10",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-016",
+      "kind": "ticket",
+      "label": "TKT-M2-016 · MechanicRuntime.tickScope + activate/deactivate",
+      "sub": "M2 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R04"
+        ],
+        "acs": [
+          "AC05",
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-017",
+      "kind": "ticket",
+      "label": "TKT-M2-017 · 2–3 stub-плагина (resolver + tracker)",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M2-018",
+      "kind": "ticket",
+      "label": "TKT-M2-018 · M2 демо: контент → механика реагирует",
+      "sub": "M2 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M2 v1.0 — «Content + Mechanics».md",
+      "meta": {
+        "requirements": [],
+        "acs": [
+          "AC04",
+          "AC05",
+          "AC08",
+          "AC10"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-001",
+      "kind": "ticket",
+      "label": "TKT-M3-001 · RngStreamName type + каталог имён",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-002",
+      "kind": "ticket",
+      "label": "TKT-M3-002 · RngStreamState type + JSON Schema",
+      "sub": "M3 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-003",
+      "kind": "ticket",
+      "label": "TKT-M3-003 · XorShift128Plus core",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-004",
+      "kind": "ticket",
+      "label": "TKT-M3-004 · StreamDerivation (из masterSeed)",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-005",
+      "kind": "ticket",
+      "label": "TKT-M3-005 · SeededRngService: nextFloat/nextInt/pickOne/shuffle/chance",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC04",
+          "AC05",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-006",
+      "kind": "ticket",
+      "label": "TKT-M3-006 · getState/restoreState/serializeAll",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-007",
+      "kind": "ticket",
+      "label": "TKT-M3-007 · FixedRngService (тест-адаптер)",
+      "sub": "M3 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-008",
+      "kind": "ticket",
+      "label": "TKT-M3-008 · Contract-тесты: детерминизм, изоляция",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03",
+          "R04",
+          "R05"
+        ],
+        "acs": [
+          "AC01",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-009",
+      "kind": "ticket",
+      "label": "TKT-M3-009 · SaveSnapshot type + JSON Schema",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-010",
+      "kind": "ticket",
+      "label": "TKT-M3-010 · IMementoProvider interface",
+      "sub": "M3 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-011",
+      "kind": "ticket",
+      "label": "TKT-M3-011 · MementoRegistry",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-012",
+      "kind": "ticket",
+      "label": "TKT-M3-012 · ISaveRepository + LocalStorageSaveRepository",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R03"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-013",
+      "kind": "ticket",
+      "label": "TKT-M3-013 · InMemorySaveRepository (тест)",
+      "sub": "M3 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-014",
+      "kind": "ticket",
+      "label": "TKT-M3-014 · SaveGameUseCase",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-015",
+      "kind": "ticket",
+      "label": "TKT-M3-015 · LoadGameUseCase",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC04",
+          "AC05",
+          "AC06"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-016",
+      "kind": "ticket",
+      "label": "TKT-M3-016 · SaveSnapshotValidator",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-017",
+      "kind": "ticket",
+      "label": "TKT-M3-017 · ContentHash check при load",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [
+          "AC04"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-018",
+      "kind": "ticket",
+      "label": "TKT-M3-018 · List/Delete use cases",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-019",
+      "kind": "ticket",
+      "label": "TKT-M3-019 · Stub-провайдеры (RNG + mechanic runtime)",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-020",
+      "kind": "ticket",
+      "label": "TKT-M3-020 · Determinism-тест roundtrip",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-021",
+      "kind": "ticket",
+      "label": "TKT-M3-021 · TickPhase + IGameClock interface",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-022",
+      "kind": "ticket",
+      "label": "TKT-M3-022 · ClockState + InterpolationClock",
+      "sub": "M3 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-023",
+      "kind": "ticket",
+      "label": "TKT-M3-023 · TickScheduler — фикс. порядок фаз",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC06"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-024",
+      "kind": "ticket",
+      "label": "TKT-M3-024 · RafGameClock — RAF loop, pause/speed",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R03",
+          "R04"
+        ],
+        "acs": [
+          "AC04",
+          "AC05",
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-025",
+      "kind": "ticket",
+      "label": "TKT-M3-025 · ManualGameClock (тест)",
+      "sub": "M3 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M3-026",
+      "kind": "ticket",
+      "label": "TKT-M3-026 · M3 демо: N тиков → save → load → ident",
+      "sub": "M3 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M3 v1.0 — «Determinism + State».md",
+      "meta": {
+        "requirements": [],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-001",
+      "kind": "ticket",
+      "label": "TKT-M4-001 · CLI skeleton: `ci:validate`",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R06"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-002",
+      "kind": "ticket",
+      "label": "TKT-M4-002 · ValidationIssue + StageResult types",
+      "sub": "M4 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R06"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-003",
+      "kind": "ticket",
+      "label": "TKT-M4-003 · JsonReporter + ConsoleReporter",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-004",
+      "kind": "ticket",
+      "label": "TKT-M4-004 · CI stage: schemas",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-005",
+      "kind": "ticket",
+      "label": "TKT-M4-005 · CI stage: graph",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [
+          "AC04",
+          "AC05"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-006",
+      "kind": "ticket",
+      "label": "TKT-M4-006 · CI stage: gameplay (5–10 базовых правил)",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-007",
+      "kind": "ticket",
+      "label": "TKT-M4-007 · CI stage: events",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08",
+          "AC09"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-008",
+      "kind": "ticket",
+      "label": "TKT-M4-008 · CI stage: mechanics",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-009",
+      "kind": "ticket",
+      "label": "TKT-M4-009 · CI stage: rng-streams",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-010",
+      "kind": "ticket",
+      "label": "TKT-M4-010 · CI stage: determinism",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R07"
+        ],
+        "acs": [
+          "AC10",
+          "AC11"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-011",
+      "kind": "ticket",
+      "label": "TKT-M4-011 · CI stage: contracts",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R08"
+        ],
+        "acs": [
+          "AC12",
+          "AC13"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-012",
+      "kind": "ticket",
+      "label": "TKT-M4-012 · pre-push hook",
+      "sub": "M4 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [
+          "AC12"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-013",
+      "kind": "ticket",
+      "label": "TKT-M4-013 · LocalizationKey + ILocalizationService",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R05"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-014",
+      "kind": "ticket",
+      "label": "TKT-M4-014 · JsonLocalizationService: t, setLocale, fallback",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC02",
+          "AC03",
+          "AC04",
+          "AC07",
+          "AC08"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-015",
+      "kind": "ticket",
+      "label": "TKT-M4-015 · tPlural для en/ru",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-016",
+      "kind": "ticket",
+      "label": "TKT-M4-016 · locale-file.json schema + минимальные en/ru",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-017",
+      "kind": "ticket",
+      "label": "TKT-M4-017 · InMemoryLocalizationService (тест)",
+      "sub": "M4 · XS",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-018",
+      "kind": "ticket",
+      "label": "TKT-M4-018 · gameplay rule: localization/key-exists",
+      "sub": "M4 · S",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-019",
+      "kind": "ticket",
+      "label": "TKT-M4-019 · Bootstrap всех foundation-сервисов",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC06",
+          "AC07"
+        ],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M4-020",
+      "kind": "ticket",
+      "label": "TKT-M4-020 · M4 демо: полный E2E skeleton",
+      "sub": "M4 · M",
+      "path": ".workflow/ticket/Wave 0/TICKETS-M4 v1.0 — «Validation + Localization + Integration».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": []
+      }
+    },
+    {
+      "id": "TKT-M5-001",
+      "kind": "ticket",
+      "label": "TKT-M5-001 · Registry mapping + 7 схем экономики",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": [
+          "4.2",
+          "6.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-002",
+      "kind": "ticket",
+      "label": "TKT-M5-002 · GoodDefinition (TS) + контент goods",
+      "sub": "M5 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01"
+        ],
+        "sections": [
+          "5.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-003",
+      "kind": "ticket",
+      "label": "TKT-M5-003 · RecipeDefinition (TS) + контент recipes",
+      "sub": "M5 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [
+          "AC01"
+        ],
+        "sections": [
+          "5.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-004",
+      "kind": "ticket",
+      "label": "TKT-M5-004 · ProductionChainDefinition + graph-инварианты",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": [
+          "5.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-005",
+      "kind": "ticket",
+      "label": "TKT-M5-005 · TradeNode/TradeRoute + контент узлов и рёбер среза",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-006",
+      "kind": "ticket",
+      "label": "TKT-M5-006 · MarketDefinition + MarketState (TS)",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R06"
+        ],
+        "acs": [
+          "AC03",
+          "AC05",
+          "AC11"
+        ],
+        "sections": [
+          "5.5",
+          "5.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-007",
+      "kind": "ticket",
+      "label": "TKT-M5-007 · EconomyErrors + Result codes",
+      "sub": "M5 · XS",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "8.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-008",
+      "kind": "ticket",
+      "label": "TKT-M5-008 · ICargoCapacityPort + NullCargoCapacityPort",
+      "sub": "M5 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [],
+        "sections": [
+          "5.8"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-009",
+      "kind": "ticket",
+      "label": "TKT-M5-009 · PricePolicyResolver",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R03",
+          "R06"
+        ],
+        "acs": [
+          "AC05",
+          "AC11"
+        ],
+        "sections": [
+          "5.5",
+          "7.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-010",
+      "kind": "ticket",
+      "label": "TKT-M5-010 · InventoryOps: резервы + INV-09/10",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R02"
+        ],
+        "acs": [
+          "AC03",
+          "AC04"
+        ],
+        "sections": [
+          "5.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-011",
+      "kind": "ticket",
+      "label": "TKT-M5-011 · Механика economy-market-price-tracker",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05"
+        ],
+        "sections": [
+          "6.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-012",
+      "kind": "ticket",
+      "label": "TKT-M5-012 · Механика economy-production-chain-runner",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07"
+        ],
+        "sections": [
+          "6.1",
+          "7.5"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-013",
+      "kind": "ticket",
+      "label": "TKT-M5-013 · Механика economy-trade-agents-sim",
+      "sub": "M5 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC09"
+        ],
+        "sections": [
+          "6.1",
+          "7.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-014",
+      "kind": "ticket",
+      "label": "TKT-M5-014 · MarketStateMementoProvider",
+      "sub": "M5 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC10"
+        ],
+        "sections": [
+          "8.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-015",
+      "kind": "ticket",
+      "label": "TKT-M5-015 · Событийное ядро economy.*",
+      "sub": "M5 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "6.4",
+          "9"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-016",
+      "kind": "ticket",
+      "label": "TKT-M5-016 · ITradeService + ExecuteSpotTrade",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R06"
+        ],
+        "acs": [
+          "AC03",
+          "AC04",
+          "AC05"
+        ],
+        "sections": [
+          "5.7",
+          "7.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-017",
+      "kind": "ticket",
+      "label": "TKT-M5-017 · Use cases: GetTradeOffers / GetMarketPrices / RunProductionChain / AcceptSupplyContract",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R06"
+        ],
+        "acs": [
+          "AC06"
+        ],
+        "sections": [
+          "9.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-018",
+      "kind": "ticket",
+      "label": "TKT-M5-018 · CI: расширение стадии graph (economy)",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": [
+          "12.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-019",
+      "kind": "ticket",
+      "label": "TKT-M5-019 · CI: determinism-сценарий экономики + rng-streams fixture",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": [
+          "12.4",
+          "12.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M5-020",
+      "kind": "ticket",
+      "label": "TKT-M5-020 · Bootstrap экономики + демо demo:m5",
+      "sub": "M5 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M5 v1.0 — «Market & Trade Core».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "16"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-001",
+      "kind": "ticket",
+      "label": "TKT-M6-001 · 4 контент-схемы + registry mapping",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": [
+          "6.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-002",
+      "kind": "ticket",
+      "label": "TKT-M6-002 · GuildDefinition + GuildChapterDefinition + контент среза",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01"
+        ],
+        "sections": [
+          "5.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-003",
+      "kind": "ticket",
+      "label": "TKT-M6-003 · GuildQuestTemplateDefinition + 6 quest types",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-004",
+      "kind": "ticket",
+      "label": "TKT-M6-004 · TradeAgentDefinition + контент агентов",
+      "sub": "M6 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [
+          "AC11",
+          "AC12"
+        ],
+        "sections": [
+          "5.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-005",
+      "kind": "ticket",
+      "label": "TKT-M6-005 · GuildState типы",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03"
+        ],
+        "acs": [
+          "AC03"
+        ],
+        "sections": [
+          "5.2",
+          "5.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-006",
+      "kind": "ticket",
+      "label": "TKT-M6-006 · EconomyErrors-расширение",
+      "sub": "M6 · XS",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "8.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-007",
+      "kind": "ticket",
+      "label": "TKT-M6-007 · GuildService",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03"
+        ],
+        "acs": [
+          "AC03",
+          "AC04",
+          "AC05"
+        ],
+        "sections": [
+          "5.2",
+          "5.3",
+          "5.7"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-008",
+      "kind": "ticket",
+      "label": "TKT-M6-008 · IWorldContextPort + Fixture",
+      "sub": "M6 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07"
+        ],
+        "sections": [
+          "5.8"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-009",
+      "kind": "ticket",
+      "label": "TKT-M6-009 · QuestInstance + QuestBoardState",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-010",
+      "kind": "ticket",
+      "label": "TKT-M6-010 · QuestGenerator",
+      "sub": "M6 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-011",
+      "kind": "ticket",
+      "label": "TKT-M6-011 · IBattlePort-стуб + risk-развилка",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [
+          "AC11"
+        ],
+        "sections": [
+          "5.5"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-012",
+      "kind": "ticket",
+      "label": "TKT-M6-012 · Механика quest-board-tracker",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09",
+          "AC10"
+        ],
+        "sections": [
+          "6.1",
+          "7.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-013",
+      "kind": "ticket",
+      "label": "TKT-M6-013 · Механика guild-reputation-tracker",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06"
+        ],
+        "sections": [
+          "6.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-014",
+      "kind": "ticket",
+      "label": "TKT-M6-014 · 3 memento-провайдера",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [],
+        "sections": [
+          "8.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-015",
+      "kind": "ticket",
+      "label": "TKT-M6-015 · ITradeAgentService",
+      "sub": "M6 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [
+          "AC11",
+          "AC12"
+        ],
+        "sections": [
+          "5.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-016",
+      "kind": "ticket",
+      "label": "TKT-M6-016 · Use cases гильдий и доски",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC03",
+          "AC04",
+          "AC09"
+        ],
+        "sections": [
+          "9.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-017",
+      "kind": "ticket",
+      "label": "TKT-M6-017 · CI расширения",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": [
+          "12.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M6-018",
+      "kind": "ticket",
+      "label": "TKT-M6-018 · Bootstrap + demo:m6 + determinism",
+      "sub": "M6 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M6 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "16",
+          "7.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-001",
+      "kind": "ticket",
+      "label": "TKT-M7-001 · 5 контент-схем + 5 снимков + mapping",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01"
+        ],
+        "sections": [
+          "6.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-002",
+      "kind": "ticket",
+      "label": "TKT-M7-002 · InvestmentProjectDefinition + контент",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": [
+          "5.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-003",
+      "kind": "ticket",
+      "label": "TKT-M7-003 · InvestmentState типы",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R02"
+        ],
+        "acs": [
+          "AC01",
+          "AC03"
+        ],
+        "sections": [
+          "5.1",
+          "7.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-004",
+      "kind": "ticket",
+      "label": "TKT-M7-004 · Enterprise модели + контент",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R05"
+        ],
+        "acs": [
+          "AC09"
+        ],
+        "sections": [
+          "5.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-005",
+      "kind": "ticket",
+      "label": "TKT-M7-005 · NodeScar + шок-модель + контент",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06"
+        ],
+        "sections": [
+          "5.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-006",
+      "kind": "ticket",
+      "label": "TKT-M7-006 · Legality модели + контент",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-007",
+      "kind": "ticket",
+      "label": "TKT-M7-007 · 4 доктрины первой волны",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "5.5"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-008",
+      "kind": "ticket",
+      "label": "TKT-M7-008 · Ошибки",
+      "sub": "M7 · XS",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "8.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-009",
+      "kind": "ticket",
+      "label": "TKT-M7-009 · RealLegalityPort",
+      "sub": "M7 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC07",
+          "AC08"
+        ],
+        "sections": [
+          "5.4"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-010",
+      "kind": "ticket",
+      "label": "TKT-M7-010 · IInvestmentService",
+      "sub": "M7 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R01"
+        ],
+        "acs": [
+          "AC01",
+          "AC02"
+        ],
+        "sections": [
+          "7.2",
+          "9.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-011",
+      "kind": "ticket",
+      "label": "TKT-M7-011 · Механика investment-tracker",
+      "sub": "M7 · L",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R02",
+          "R06"
+        ],
+        "acs": [
+          "AC03",
+          "AC04",
+          "AC10"
+        ],
+        "sections": [
+          "6.1",
+          "7.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-012",
+      "kind": "ticket",
+      "label": "TKT-M7-012 · Механика node-scar-tracker",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [
+          "AC05",
+          "AC06"
+        ],
+        "sections": [
+          "6.1",
+          "7.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-013",
+      "kind": "ticket",
+      "label": "TKT-M7-013 · Механика legality-tracker",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R04"
+        ],
+        "acs": [
+          "AC08"
+        ],
+        "sections": [
+          "6.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-014",
+      "kind": "ticket",
+      "label": "TKT-M7-014 · Hidden-branch hooks + cataclysm_pressure",
+      "sub": "M7 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R06"
+        ],
+        "acs": [
+          "AC10"
+        ],
+        "sections": [
+          "5.6"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-015",
+      "kind": "ticket",
+      "label": "TKT-M7-015 · ICataclysmEconomyPort + fixture",
+      "sub": "M7 · S",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R03"
+        ],
+        "acs": [],
+        "sections": [
+          "5.3",
+          "8.1"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-016",
+      "kind": "ticket",
+      "label": "TKT-M7-016 · 4 memento-провайдера",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R03",
+          "R05"
+        ],
+        "acs": [
+          "AC05",
+          "AC09"
+        ],
+        "sections": [
+          "8.2"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-017",
+      "kind": "ticket",
+      "label": "TKT-M7-017 · Use cases",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [
+          "R01",
+          "R04"
+        ],
+        "acs": [
+          "AC01",
+          "AC07"
+        ],
+        "sections": [
+          "9.3"
+        ]
+      }
+    },
+    {
+      "id": "TKT-M7-018",
+      "kind": "ticket",
+      "label": "TKT-M7-018 · CI + bootstrap + demo:m7",
+      "sub": "M7 · M",
+      "path": ".workflow/ticket/Wave 3/TICKETS-M7 v1.0 — «Investments, Enterprises & Legality».md",
+      "meta": {
+        "requirements": [],
+        "acs": [],
+        "sections": [
+          "12.6",
+          "16"
+        ]
+      }
     }
   ],
   "edges": [
@@ -2900,9 +5320,2788 @@
       "to": "DEV-SPEC-026",
       "via": "spec",
       "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-001",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R01 · DEV-SPEC-001-AC01, DEV-SPEC-001-AC02, DEV-SPEC-001-AC03"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-002",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R02 · DEV-SPEC-001-AC04, DEV-SPEC-001-AC05"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-003",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R02"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-004",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R03"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-005",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R03"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-006",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R03, DEV-SPEC-001-R04 · DEV-SPEC-001-AC06, DEV-SPEC-001-AC07, DEV-SPEC-001-AC08, DEV-SPEC-001-AC09"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-007",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R05"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-008",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R05"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-009",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R01 · DEV-SPEC-002-AC01, DEV-SPEC-002-AC02"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-010",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R01, DEV-SPEC-002-R04 · DEV-SPEC-002-AC01, DEV-SPEC-002-AC02, DEV-SPEC-002-AC08, DEV-SPEC-002-AC09"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-011",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R02 · DEV-SPEC-002-AC03, DEV-SPEC-002-AC04"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-012",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R03 · DEV-SPEC-002-AC05, DEV-SPEC-002-AC06, DEV-SPEC-002-AC07"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-013",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R04 · DEV-SPEC-002-AC08, DEV-SPEC-002-AC09"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-014",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R04"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-015",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R05 · DEV-SPEC-002-AC10, DEV-SPEC-002-AC11"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-016",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R05 · DEV-SPEC-002-AC10, DEV-SPEC-002-AC11"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-017",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R01, DEV-SPEC-002-R02, DEV-SPEC-002-R03, DEV-SPEC-002-R04, DEV-SPEC-002-R05 · DEV-SPEC-002-AC01, DEV-SPEC-002-AC11"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M1-018",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R01, DEV-SPEC-001-R03, DEV-SPEC-001-R04 · DEV-SPEC-001-AC01, DEV-SPEC-001-AC05, DEV-SPEC-001-AC06, DEV-SPEC-001-AC07, DEV-SPEC-001-AC08"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "TKT-M1-018",
+      "via": "section",
+      "detail": "DEV-SPEC-002-R01, DEV-SPEC-002-R03, DEV-SPEC-002-R04 · DEV-SPEC-002-AC01, DEV-SPEC-002-AC05, DEV-SPEC-002-AC06, DEV-SPEC-002-AC07, DEV-SPEC-002-AC08"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-001",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R01, DEV-SPEC-003-R02, DEV-SPEC-003-R03"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-002",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R01"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-003",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R01"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-004",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R03"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-005",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R01, DEV-SPEC-003-R02 · DEV-SPEC-003-AC01, DEV-SPEC-003-AC02, DEV-SPEC-003-AC03, DEV-SPEC-003-AC04, DEV-SPEC-003-AC05"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-006",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R03 · DEV-SPEC-003-AC06, DEV-SPEC-003-AC07, DEV-SPEC-003-AC08"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-007",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R04 · DEV-SPEC-003-AC09, DEV-SPEC-003-AC10"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-008",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R05 · DEV-SPEC-003-AC11"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-009",
+      "via": "section",
+      "detail": "DEV-SPEC-003-R01"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-010",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R01 · DEV-SPEC-004-AC01, DEV-SPEC-004-AC02, DEV-SPEC-004-AC03"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-011",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R02, DEV-SPEC-004-R03, DEV-SPEC-004-R04"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-012",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R04, DEV-SPEC-004-R05 · DEV-SPEC-004-AC10, DEV-SPEC-004-AC11"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-013",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R01 · DEV-SPEC-004-AC01, DEV-SPEC-004-AC02, DEV-SPEC-004-AC03"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-014",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R04 · DEV-SPEC-004-AC08, DEV-SPEC-004-AC09"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-015",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R02, DEV-SPEC-004-R03, DEV-SPEC-004-R05 · DEV-SPEC-004-AC04, DEV-SPEC-004-AC05, DEV-SPEC-004-AC06, DEV-SPEC-004-AC07, DEV-SPEC-004-AC10, DEV-SPEC-004-AC11"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-016",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R02, DEV-SPEC-004-R04 · DEV-SPEC-004-AC05, DEV-SPEC-004-AC08, DEV-SPEC-004-AC09"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-017",
+      "via": "section",
+      "detail": "DEV-SPEC-004-R02, DEV-SPEC-004-R03, DEV-SPEC-004-R04"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "TKT-M2-018",
+      "via": "section",
+      "detail": "DEV-SPEC-003-AC04, DEV-SPEC-003-AC05, DEV-SPEC-003-AC08, DEV-SPEC-003-AC10"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "TKT-M2-018",
+      "via": "section",
+      "detail": "DEV-SPEC-004-AC04, DEV-SPEC-004-AC05, DEV-SPEC-004-AC08, DEV-SPEC-004-AC10"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-001",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R02"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-002",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R04"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-003",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R04 · DEV-SPEC-005-AC01, DEV-SPEC-005-AC06, DEV-SPEC-005-AC07"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-004",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R02 · DEV-SPEC-005-AC01, DEV-SPEC-005-AC02"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-005",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R02, DEV-SPEC-005-R03, DEV-SPEC-005-R05 · DEV-SPEC-005-AC01, DEV-SPEC-005-AC02, DEV-SPEC-005-AC03, DEV-SPEC-005-AC04, DEV-SPEC-005-AC05, DEV-SPEC-005-AC08"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-006",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R04 · DEV-SPEC-005-AC06, DEV-SPEC-005-AC07"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-007",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R04"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-008",
+      "via": "section",
+      "detail": "DEV-SPEC-005-R01, DEV-SPEC-005-R02, DEV-SPEC-005-R03, DEV-SPEC-005-R04, DEV-SPEC-005-R05 · DEV-SPEC-005-AC01, DEV-SPEC-005-AC08"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-009",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01, DEV-SPEC-006-R03"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-010",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R04"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-011",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R04 · DEV-SPEC-006-AC07, DEV-SPEC-006-AC08"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-012",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01, DEV-SPEC-006-R03"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-013",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-014",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01, DEV-SPEC-006-R04 · DEV-SPEC-006-AC01, DEV-SPEC-006-AC02, DEV-SPEC-006-AC03, DEV-SPEC-006-AC07"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-015",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01, DEV-SPEC-006-R02, DEV-SPEC-006-R03 · DEV-SPEC-006-AC01, DEV-SPEC-006-AC02, DEV-SPEC-006-AC03, DEV-SPEC-006-AC04, DEV-SPEC-006-AC05, DEV-SPEC-006-AC06"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-016",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R03 · DEV-SPEC-006-AC05, DEV-SPEC-006-AC06"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-017",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R02 · DEV-SPEC-006-AC04"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-018",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-019",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "TKT-M3-020",
+      "via": "section",
+      "detail": "DEV-SPEC-006-R01, DEV-SPEC-006-R02 · DEV-SPEC-006-AC01, DEV-SPEC-006-AC02, DEV-SPEC-006-AC03"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "TKT-M3-021",
+      "via": "section",
+      "detail": "DEV-SPEC-007-R01"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "TKT-M3-022",
+      "via": "section",
+      "detail": "DEV-SPEC-007-R03, DEV-SPEC-007-R05 · DEV-SPEC-007-AC08, DEV-SPEC-007-AC09"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "TKT-M3-023",
+      "via": "section",
+      "detail": "DEV-SPEC-007-R01, DEV-SPEC-007-R02 · DEV-SPEC-007-AC01, DEV-SPEC-007-AC02, DEV-SPEC-007-AC03, DEV-SPEC-007-AC06"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "TKT-M3-024",
+      "via": "section",
+      "detail": "DEV-SPEC-007-R01, DEV-SPEC-007-R02, DEV-SPEC-007-R03, DEV-SPEC-007-R04 · DEV-SPEC-007-AC04, DEV-SPEC-007-AC05, DEV-SPEC-007-AC06, DEV-SPEC-007-AC07"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "TKT-M3-025",
+      "via": "section",
+      "detail": "DEV-SPEC-007-R01"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "TKT-M3-026",
+      "via": "section",
+      "detail": "DEV-SPEC-005-AC01, DEV-SPEC-005-AC02, DEV-SPEC-005-AC03, DEV-SPEC-005-AC07"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-001",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R01, DEV-SPEC-008-R06"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-002",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R01, DEV-SPEC-008-R06"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-003",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R01 · DEV-SPEC-008-AC03"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-004",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R01 · DEV-SPEC-008-AC01, DEV-SPEC-008-AC02, DEV-SPEC-008-AC03"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-005",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R02 · DEV-SPEC-008-AC04, DEV-SPEC-008-AC05"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-006",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R03 · DEV-SPEC-008-AC06, DEV-SPEC-008-AC07"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-007",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R04 · DEV-SPEC-008-AC08, DEV-SPEC-008-AC09"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-008",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R05"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-009",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R06"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-010",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R07 · DEV-SPEC-008-AC10, DEV-SPEC-008-AC11"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-011",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R08 · DEV-SPEC-008-AC12, DEV-SPEC-008-AC13"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-012",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R06 · DEV-SPEC-008-AC12"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-013",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R01, DEV-SPEC-009-R05"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-014",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R01, DEV-SPEC-009-R02, DEV-SPEC-009-R04 · DEV-SPEC-009-AC01, DEV-SPEC-009-AC02, DEV-SPEC-009-AC03, DEV-SPEC-009-AC04, DEV-SPEC-009-AC07, DEV-SPEC-009-AC08"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-015",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R03 · DEV-SPEC-009-AC05, DEV-SPEC-009-AC06"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-016",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R05 · DEV-SPEC-009-AC09, DEV-SPEC-009-AC10"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-017",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R01"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "TKT-M4-018",
+      "via": "section",
+      "detail": "DEV-SPEC-008-R05 · DEV-SPEC-008-AC09, DEV-SPEC-008-AC10"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "TKT-M4-018",
+      "via": "section",
+      "detail": "DEV-SPEC-009-R05 · DEV-SPEC-009-AC09, DEV-SPEC-009-AC10"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M4-019",
+      "via": "section",
+      "detail": "DEV-SPEC-001-R03 · DEV-SPEC-001-AC06, DEV-SPEC-001-AC07"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "TKT-M4-020",
+      "via": "section"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-001",
+      "via": "section",
+      "detail": "§4.2, §6.2 · DEV-SPEC-020-R01 · DEV-SPEC-020-AC01, DEV-SPEC-020-AC02"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-002",
+      "via": "section",
+      "detail": "§5.1 · DEV-SPEC-020-R01 · DEV-SPEC-020-AC01"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-003",
+      "via": "section",
+      "detail": "§5.2 · DEV-SPEC-020-R01, DEV-SPEC-020-R04 · DEV-SPEC-020-AC01"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-004",
+      "via": "section",
+      "detail": "§5.3 · DEV-SPEC-020-R04 · DEV-SPEC-020-AC07, DEV-SPEC-020-AC08"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-005",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-020-R04 · DEV-SPEC-020-AC08"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-006",
+      "via": "section",
+      "detail": "§5.5, §5.6 · DEV-SPEC-020-R02, DEV-SPEC-020-R03, DEV-SPEC-020-R06 · DEV-SPEC-020-AC03, DEV-SPEC-020-AC05, DEV-SPEC-020-AC11"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-007",
+      "via": "section",
+      "detail": "§8.3"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-008",
+      "via": "section",
+      "detail": "§5.8 · DEV-SPEC-020-R02"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-009",
+      "via": "section",
+      "detail": "§5.5, §7.2 · DEV-SPEC-020-R03, DEV-SPEC-020-R06 · DEV-SPEC-020-AC05, DEV-SPEC-020-AC11"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-010",
+      "via": "section",
+      "detail": "§5.6 · DEV-SPEC-020-R02 · DEV-SPEC-020-AC03, DEV-SPEC-020-AC04"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-011",
+      "via": "section",
+      "detail": "§6.1 · DEV-SPEC-020-R03 · DEV-SPEC-020-AC05"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-012",
+      "via": "section",
+      "detail": "§6.1, §7.5 · DEV-SPEC-020-R04 · DEV-SPEC-020-AC07"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-013",
+      "via": "section",
+      "detail": "§6.1, §7.3 · DEV-SPEC-020-R03, DEV-SPEC-020-R05 · DEV-SPEC-020-AC09"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-014",
+      "via": "section",
+      "detail": "§8.2 · DEV-SPEC-020-R05 · DEV-SPEC-020-AC10"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-015",
+      "via": "section",
+      "detail": "§6.4, §9"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-016",
+      "via": "section",
+      "detail": "§5.7, §7.2 · DEV-SPEC-020-R02, DEV-SPEC-020-R03, DEV-SPEC-020-R06 · DEV-SPEC-020-AC03, DEV-SPEC-020-AC04, DEV-SPEC-020-AC05"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-017",
+      "via": "section",
+      "detail": "§9.4 · DEV-SPEC-020-R02, DEV-SPEC-020-R06 · DEV-SPEC-020-AC06"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-018",
+      "via": "section",
+      "detail": "§12.6 · DEV-SPEC-020-R04 · DEV-SPEC-020-AC07, DEV-SPEC-020-AC08"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-019",
+      "via": "section",
+      "detail": "§12.4, §12.6 · DEV-SPEC-020-R05 · DEV-SPEC-020-AC09, DEV-SPEC-020-AC10"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "TKT-M5-020",
+      "via": "section",
+      "detail": "§16"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-001",
+      "via": "section",
+      "detail": "§6.2 · DEV-SPEC-021-R01 · DEV-SPEC-021-AC01, DEV-SPEC-021-AC02"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-002",
+      "via": "section",
+      "detail": "§5.1 · DEV-SPEC-021-R01 · DEV-SPEC-021-AC01"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-003",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-021-R04 · DEV-SPEC-021-AC08"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-004",
+      "via": "section",
+      "detail": "§5.6 · DEV-SPEC-021-R06 · DEV-SPEC-021-AC11, DEV-SPEC-021-AC12"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-005",
+      "via": "section",
+      "detail": "§5.2, §5.3 · DEV-SPEC-021-R02, DEV-SPEC-021-R03 · DEV-SPEC-021-AC03"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-006",
+      "via": "section",
+      "detail": "§8.2"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-007",
+      "via": "section",
+      "detail": "§5.2, §5.3, §5.7 · DEV-SPEC-021-R02, DEV-SPEC-021-R03 · DEV-SPEC-021-AC03, DEV-SPEC-021-AC04, DEV-SPEC-021-AC05"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-008",
+      "via": "section",
+      "detail": "§5.8 · DEV-SPEC-021-R04 · DEV-SPEC-021-AC07"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-009",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-021-R05 · DEV-SPEC-021-AC09, DEV-SPEC-021-AC10"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-010",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-021-R04 · DEV-SPEC-021-AC07, DEV-SPEC-021-AC08"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-011",
+      "via": "section",
+      "detail": "§5.5 · DEV-SPEC-021-R06 · DEV-SPEC-021-AC11"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-012",
+      "via": "section",
+      "detail": "§6.1, §7.2 · DEV-SPEC-021-R05 · DEV-SPEC-021-AC09, DEV-SPEC-021-AC10"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-013",
+      "via": "section",
+      "detail": "§6.1 · DEV-SPEC-021-R03 · DEV-SPEC-021-AC05, DEV-SPEC-021-AC06"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-014",
+      "via": "section",
+      "detail": "§8.2 · DEV-SPEC-021-R03"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-015",
+      "via": "section",
+      "detail": "§5.6 · DEV-SPEC-021-R06 · DEV-SPEC-021-AC11, DEV-SPEC-021-AC12"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-016",
+      "via": "section",
+      "detail": "§9.4 · DEV-SPEC-021-R02, DEV-SPEC-021-R03, DEV-SPEC-021-R05 · DEV-SPEC-021-AC03, DEV-SPEC-021-AC04, DEV-SPEC-021-AC09"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-017",
+      "via": "section",
+      "detail": "§12.6 · DEV-SPEC-021-R01 · DEV-SPEC-021-AC01, DEV-SPEC-021-AC02"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "TKT-M6-018",
+      "via": "section",
+      "detail": "§16, §7.4"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-001",
+      "via": "section",
+      "detail": "§6.2 · DEV-SPEC-022-R01 · DEV-SPEC-022-AC01"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-002",
+      "via": "section",
+      "detail": "§5.1 · DEV-SPEC-022-R01 · DEV-SPEC-022-AC01, DEV-SPEC-022-AC02"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-003",
+      "via": "section",
+      "detail": "§5.1, §7.1 · DEV-SPEC-022-R01, DEV-SPEC-022-R02 · DEV-SPEC-022-AC01, DEV-SPEC-022-AC03"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-004",
+      "via": "section",
+      "detail": "§5.2 · DEV-SPEC-022-R05 · DEV-SPEC-022-AC09"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-005",
+      "via": "section",
+      "detail": "§5.3 · DEV-SPEC-022-R03 · DEV-SPEC-022-AC05, DEV-SPEC-022-AC06"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-006",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-022-R04 · DEV-SPEC-022-AC07, DEV-SPEC-022-AC08"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-007",
+      "via": "section",
+      "detail": "§5.5"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-008",
+      "via": "section",
+      "detail": "§8.2"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-009",
+      "via": "section",
+      "detail": "§5.4 · DEV-SPEC-022-R04 · DEV-SPEC-022-AC07, DEV-SPEC-022-AC08"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-010",
+      "via": "section",
+      "detail": "§7.2, §9.3 · DEV-SPEC-022-R01 · DEV-SPEC-022-AC01, DEV-SPEC-022-AC02"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-011",
+      "via": "section",
+      "detail": "§6.1, §7.2 · DEV-SPEC-022-R02, DEV-SPEC-022-R06 · DEV-SPEC-022-AC03, DEV-SPEC-022-AC04, DEV-SPEC-022-AC10"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-012",
+      "via": "section",
+      "detail": "§6.1, §7.1 · DEV-SPEC-022-R03 · DEV-SPEC-022-AC05, DEV-SPEC-022-AC06"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-013",
+      "via": "section",
+      "detail": "§6.1 · DEV-SPEC-022-R04 · DEV-SPEC-022-AC08"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-014",
+      "via": "section",
+      "detail": "§5.6 · DEV-SPEC-022-R06 · DEV-SPEC-022-AC10"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-015",
+      "via": "section",
+      "detail": "§5.3, §8.1 · DEV-SPEC-022-R03"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-016",
+      "via": "section",
+      "detail": "§8.2 · DEV-SPEC-022-R03, DEV-SPEC-022-R05 · DEV-SPEC-022-AC05, DEV-SPEC-022-AC09"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-017",
+      "via": "section",
+      "detail": "§9.3 · DEV-SPEC-022-R01, DEV-SPEC-022-R04 · DEV-SPEC-022-AC01, DEV-SPEC-022-AC07"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "TKT-M7-018",
+      "via": "section",
+      "detail": "§12.6, §16"
     }
   ],
-  "ticketTraces": {},
+  "ticketTraces": {
+    "TKT-M1-001": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-002": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-003": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-004": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-005": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-006": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M1-007": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-008": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-009": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-010": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-011": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-012": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-013": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-014": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-015": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-016": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-017": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M1-018": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0",
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»"
+      ],
+      "specs": [
+        "DEV-SPEC-001",
+        "DEV-SPEC-002"
+      ]
+    },
+    "TKT-M2-001": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-002": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-003": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-004": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-005": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-006": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-007": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-008": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-009": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-003"
+      ]
+    },
+    "TKT-M2-010": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-011": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-012": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-013": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-014": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-015": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-016": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-017": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M2-018": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»"
+      ],
+      "specs": [
+        "DEV-SPEC-003",
+        "DEV-SPEC-004"
+      ]
+    },
+    "TKT-M3-001": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-002": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-003": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-004": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-005": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-006": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-007": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-008": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M3-009": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-010": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-011": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-012": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-013": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-014": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-015": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-016": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-017": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-018": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-019": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-020": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-006"
+      ]
+    },
+    "TKT-M3-021": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-007"
+      ]
+    },
+    "TKT-M3-022": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-007"
+      ]
+    },
+    "TKT-M3-023": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-007"
+      ]
+    },
+    "TKT-M3-024": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-007"
+      ]
+    },
+    "TKT-M3-025": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-007"
+      ]
+    },
+    "TKT-M3-026": {
+      "intents": [],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-005"
+      ]
+    },
+    "TKT-M4-001": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-002": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-003": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-004": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-005": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-006": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-007": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-008": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-009": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-010": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-011": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-012": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008"
+      ]
+    },
+    "TKT-M4-013": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-014": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-015": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-016": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-017": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-018": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+        "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+        "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+        "DESIGN 1.0 — «Система напарников»",
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "DESIGN 1.0 — «Генератор эпилога»",
+        "DESIGN 1.0 — «Механики корабельных веток фракций»",
+        "DESIGN 1.0 — «Сюжет и лор»",
+        "DESIGN 1.0 — «Менеджмент отряда»",
+        "DESIGN 1.0 — «Скрытые ветки трансформации»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-008",
+        "DEV-SPEC-009"
+      ]
+    },
+    "TKT-M4-019": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M4-020": {
+      "intents": [],
+      "designs": [
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-001"
+      ]
+    },
+    "TKT-M5-001": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-002": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-003": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-004": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-005": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-006": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-007": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-008": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-009": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-010": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-011": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-012": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-013": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-014": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-015": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-016": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-017": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-018": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-019": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M5-020": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-020"
+      ]
+    },
+    "TKT-M6-001": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-002": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-003": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-004": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-005": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-006": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-007": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-008": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-009": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-010": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-011": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-012": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-013": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-014": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-015": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-016": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-017": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M6-018": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-021"
+      ]
+    },
+    "TKT-M7-001": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-002": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-003": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-004": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-005": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-006": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-007": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-008": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-009": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-010": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-011": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-012": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-013": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-014": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-015": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-016": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-017": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    },
+    "TKT-M7-018": {
+      "intents": [
+        "INTENT v1.0"
+      ],
+      "designs": [
+        "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+        "GENERAL DESIGN v1.0"
+      ],
+      "specs": [
+        "DEV-SPEC-022"
+      ]
+    }
+  },
   "coverage": {
     "intents": {
       "INT-01": {
@@ -3055,64 +8254,275 @@
         "acs": []
       },
       "DEV-SPEC-020": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 20,
+        "requirements": [
+          "DEV-SPEC-020-R01",
+          "DEV-SPEC-020-R04",
+          "DEV-SPEC-020-R02",
+          "DEV-SPEC-020-R03",
+          "DEV-SPEC-020-R06",
+          "DEV-SPEC-020-R05"
+        ],
+        "acs": [
+          "DEV-SPEC-020-AC01",
+          "DEV-SPEC-020-AC02",
+          "DEV-SPEC-020-AC07",
+          "DEV-SPEC-020-AC08",
+          "DEV-SPEC-020-AC03",
+          "DEV-SPEC-020-AC05",
+          "DEV-SPEC-020-AC11",
+          "DEV-SPEC-020-AC04",
+          "DEV-SPEC-020-AC09",
+          "DEV-SPEC-020-AC10",
+          "DEV-SPEC-020-AC06"
+        ]
       },
       "DEV-SPEC-021": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 18,
+        "requirements": [
+          "DEV-SPEC-021-R01",
+          "DEV-SPEC-021-R04",
+          "DEV-SPEC-021-R06",
+          "DEV-SPEC-021-R02",
+          "DEV-SPEC-021-R03",
+          "DEV-SPEC-021-R05"
+        ],
+        "acs": [
+          "DEV-SPEC-021-AC01",
+          "DEV-SPEC-021-AC02",
+          "DEV-SPEC-021-AC08",
+          "DEV-SPEC-021-AC11",
+          "DEV-SPEC-021-AC12",
+          "DEV-SPEC-021-AC03",
+          "DEV-SPEC-021-AC04",
+          "DEV-SPEC-021-AC05",
+          "DEV-SPEC-021-AC07",
+          "DEV-SPEC-021-AC09",
+          "DEV-SPEC-021-AC10",
+          "DEV-SPEC-021-AC06"
+        ]
       },
       "DEV-SPEC-022": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 18,
+        "requirements": [
+          "DEV-SPEC-022-R01",
+          "DEV-SPEC-022-R02",
+          "DEV-SPEC-022-R05",
+          "DEV-SPEC-022-R03",
+          "DEV-SPEC-022-R04",
+          "DEV-SPEC-022-R06"
+        ],
+        "acs": [
+          "DEV-SPEC-022-AC01",
+          "DEV-SPEC-022-AC02",
+          "DEV-SPEC-022-AC03",
+          "DEV-SPEC-022-AC09",
+          "DEV-SPEC-022-AC05",
+          "DEV-SPEC-022-AC06",
+          "DEV-SPEC-022-AC07",
+          "DEV-SPEC-022-AC08",
+          "DEV-SPEC-022-AC04",
+          "DEV-SPEC-022-AC10"
+        ]
       },
       "DEV-SPEC-001": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 9,
+        "requirements": [
+          "DEV-SPEC-001-R01",
+          "DEV-SPEC-001-R02",
+          "DEV-SPEC-001-R03",
+          "DEV-SPEC-001-R04"
+        ],
+        "acs": [
+          "DEV-SPEC-001-AC01",
+          "DEV-SPEC-001-AC02",
+          "DEV-SPEC-001-AC03",
+          "DEV-SPEC-001-AC04",
+          "DEV-SPEC-001-AC05",
+          "DEV-SPEC-001-AC06",
+          "DEV-SPEC-001-AC07",
+          "DEV-SPEC-001-AC08",
+          "DEV-SPEC-001-AC09"
+        ]
       },
       "DEV-SPEC-002": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 12,
+        "requirements": [
+          "DEV-SPEC-002-R05",
+          "DEV-SPEC-002-R01",
+          "DEV-SPEC-002-R04",
+          "DEV-SPEC-002-R02",
+          "DEV-SPEC-002-R03"
+        ],
+        "acs": [
+          "DEV-SPEC-002-AC01",
+          "DEV-SPEC-002-AC02",
+          "DEV-SPEC-002-AC08",
+          "DEV-SPEC-002-AC09",
+          "DEV-SPEC-002-AC03",
+          "DEV-SPEC-002-AC04",
+          "DEV-SPEC-002-AC05",
+          "DEV-SPEC-002-AC06",
+          "DEV-SPEC-002-AC07",
+          "DEV-SPEC-002-AC10",
+          "DEV-SPEC-002-AC11"
+        ]
       },
       "DEV-SPEC-003": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 10,
+        "requirements": [
+          "DEV-SPEC-003-R01",
+          "DEV-SPEC-003-R02",
+          "DEV-SPEC-003-R03",
+          "DEV-SPEC-003-R04",
+          "DEV-SPEC-003-R05"
+        ],
+        "acs": [
+          "DEV-SPEC-003-AC01",
+          "DEV-SPEC-003-AC02",
+          "DEV-SPEC-003-AC03",
+          "DEV-SPEC-003-AC04",
+          "DEV-SPEC-003-AC05",
+          "DEV-SPEC-003-AC06",
+          "DEV-SPEC-003-AC07",
+          "DEV-SPEC-003-AC08",
+          "DEV-SPEC-003-AC09",
+          "DEV-SPEC-003-AC10",
+          "DEV-SPEC-003-AC11"
+        ]
       },
       "DEV-SPEC-004": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 9,
+        "requirements": [
+          "DEV-SPEC-004-R01",
+          "DEV-SPEC-004-R02",
+          "DEV-SPEC-004-R03",
+          "DEV-SPEC-004-R04",
+          "DEV-SPEC-004-R05"
+        ],
+        "acs": [
+          "DEV-SPEC-004-AC01",
+          "DEV-SPEC-004-AC02",
+          "DEV-SPEC-004-AC03",
+          "DEV-SPEC-004-AC10",
+          "DEV-SPEC-004-AC11",
+          "DEV-SPEC-004-AC08",
+          "DEV-SPEC-004-AC09",
+          "DEV-SPEC-004-AC04",
+          "DEV-SPEC-004-AC05",
+          "DEV-SPEC-004-AC06",
+          "DEV-SPEC-004-AC07"
+        ]
       },
       "DEV-SPEC-005": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 9,
+        "requirements": [
+          "DEV-SPEC-005-R01",
+          "DEV-SPEC-005-R02",
+          "DEV-SPEC-005-R04",
+          "DEV-SPEC-005-R03",
+          "DEV-SPEC-005-R05"
+        ],
+        "acs": [
+          "DEV-SPEC-005-AC01",
+          "DEV-SPEC-005-AC06",
+          "DEV-SPEC-005-AC07",
+          "DEV-SPEC-005-AC02",
+          "DEV-SPEC-005-AC03",
+          "DEV-SPEC-005-AC04",
+          "DEV-SPEC-005-AC05",
+          "DEV-SPEC-005-AC08"
+        ]
       },
       "DEV-SPEC-006": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 12,
+        "requirements": [
+          "DEV-SPEC-006-R01",
+          "DEV-SPEC-006-R03",
+          "DEV-SPEC-006-R04",
+          "DEV-SPEC-006-R02"
+        ],
+        "acs": [
+          "DEV-SPEC-006-AC07",
+          "DEV-SPEC-006-AC08",
+          "DEV-SPEC-006-AC01",
+          "DEV-SPEC-006-AC02",
+          "DEV-SPEC-006-AC03",
+          "DEV-SPEC-006-AC04",
+          "DEV-SPEC-006-AC05",
+          "DEV-SPEC-006-AC06"
+        ]
       },
       "DEV-SPEC-007": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 5,
+        "requirements": [
+          "DEV-SPEC-007-R01",
+          "DEV-SPEC-007-R03",
+          "DEV-SPEC-007-R05",
+          "DEV-SPEC-007-R02",
+          "DEV-SPEC-007-R04"
+        ],
+        "acs": [
+          "DEV-SPEC-007-AC08",
+          "DEV-SPEC-007-AC09",
+          "DEV-SPEC-007-AC01",
+          "DEV-SPEC-007-AC02",
+          "DEV-SPEC-007-AC03",
+          "DEV-SPEC-007-AC06",
+          "DEV-SPEC-007-AC04",
+          "DEV-SPEC-007-AC05",
+          "DEV-SPEC-007-AC07"
+        ]
       },
       "DEV-SPEC-008": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 13,
+        "requirements": [
+          "DEV-SPEC-008-R01",
+          "DEV-SPEC-008-R06",
+          "DEV-SPEC-008-R02",
+          "DEV-SPEC-008-R03",
+          "DEV-SPEC-008-R04",
+          "DEV-SPEC-008-R05",
+          "DEV-SPEC-008-R07",
+          "DEV-SPEC-008-R08"
+        ],
+        "acs": [
+          "DEV-SPEC-008-AC03",
+          "DEV-SPEC-008-AC01",
+          "DEV-SPEC-008-AC02",
+          "DEV-SPEC-008-AC04",
+          "DEV-SPEC-008-AC05",
+          "DEV-SPEC-008-AC06",
+          "DEV-SPEC-008-AC07",
+          "DEV-SPEC-008-AC08",
+          "DEV-SPEC-008-AC09",
+          "DEV-SPEC-008-AC10",
+          "DEV-SPEC-008-AC11",
+          "DEV-SPEC-008-AC12",
+          "DEV-SPEC-008-AC13"
+        ]
       },
       "DEV-SPEC-009": {
-        "tickets": 0,
-        "requirements": [],
-        "acs": []
+        "tickets": 6,
+        "requirements": [
+          "DEV-SPEC-009-R01",
+          "DEV-SPEC-009-R05",
+          "DEV-SPEC-009-R02",
+          "DEV-SPEC-009-R04",
+          "DEV-SPEC-009-R03"
+        ],
+        "acs": [
+          "DEV-SPEC-009-AC01",
+          "DEV-SPEC-009-AC02",
+          "DEV-SPEC-009-AC03",
+          "DEV-SPEC-009-AC04",
+          "DEV-SPEC-009-AC07",
+          "DEV-SPEC-009-AC08",
+          "DEV-SPEC-009-AC05",
+          "DEV-SPEC-009-AC06",
+          "DEV-SPEC-009-AC09",
+          "DEV-SPEC-009-AC10"
+        ]
       },
       "DEV-SPEC-027": {
         "tickets": 0,
@@ -3180,18 +8590,6 @@
       "DEV-SPEC-017",
       "DEV-SPEC-018",
       "DEV-SPEC-019",
-      "DEV-SPEC-020",
-      "DEV-SPEC-021",
-      "DEV-SPEC-022",
-      "DEV-SPEC-001",
-      "DEV-SPEC-002",
-      "DEV-SPEC-003",
-      "DEV-SPEC-004",
-      "DEV-SPEC-005",
-      "DEV-SPEC-006",
-      "DEV-SPEC-007",
-      "DEV-SPEC-008",
-      "DEV-SPEC-009",
       "DEV-SPEC-027",
       "DEV-SPEC-010",
       "DEV-SPEC-011",

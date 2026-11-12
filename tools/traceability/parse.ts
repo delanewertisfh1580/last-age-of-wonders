@@ -198,11 +198,11 @@ export function parseTickets(workflowDir: string, repoRoot: string): ParsedTicke
     const base = file.split('/').pop()!;
     if (!base.startsWith('TICKETS')) continue; // пропускаем TICKET-TEMPLATE
     const raw = readFileSync(file, 'utf8');
-    // тикет-блоки могут быть на ### (M-файлы) или #### (шаблон/примеры)
-    const blocks = raw.split(/\n#{3,4}\s+/).slice(1);
+    // тикет-блоки: заголовок вида "### TKT-M1-001 — Название"
+    const blocks = raw.split(/\n#{3,4}[ \t]+/).slice(1);
 
     for (const block of blocks) {
-      const headMatch = block.match(/^(TKT-M\d+-\d{3})\s*—\s*(.+)$/);
+      const headMatch = block.match(/^(TKT-M\d+-\d{3})[ \t]*[—–-][ \t]*(.+)$/m);
       if (!headMatch) continue;
       const [, id, nameRaw] = headMatch;
       const end = block.indexOf('\n---');
