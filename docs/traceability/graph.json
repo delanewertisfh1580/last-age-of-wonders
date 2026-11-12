@@ -1,0 +1,3210 @@
+{
+  "nodes": [
+    {
+      "id": "INTENT v1.0",
+      "kind": "intent",
+      "label": "INTENT v1.0",
+      "sub": "Наука против Магии",
+      "path": ".workflow/change/INTENT v1.0 — «Наука против Магии».md",
+      "status": "✅ утверждено"
+    },
+    {
+      "id": "GENERAL DESIGN v1.0",
+      "kind": "design",
+      "label": "GENERAL DESIGN",
+      "sub": "Наука против Магии",
+      "path": ".workflow/design/GENERAL DESIGN v1.0 — «Наука против Магии».md",
+      "status": "✅ утверждено"
+    },
+    {
+      "id": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "kind": "design",
+      "label": "DESIGN «Арт-дирекшн и шейдеры»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Арт-дирекшн и шейдеры».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "kind": "design",
+      "label": "DESIGN «Бой команд на фоне дуэли»",
+      "sub": "Сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Бой команд на фоне дуэли».md",
+      "status": "Сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Генератор эпилога»",
+      "kind": "design",
+      "label": "DESIGN «Генератор эпилога»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Генератор эпилога».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "kind": "design",
+      "label": "DESIGN «Катаклизмы (эскалация, последствия, трансформация)»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Катаклизмы (эскалация, последствия, трансформация)».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Менеджмент отряда»",
+      "kind": "design",
+      "label": "DESIGN «Менеджмент отряда»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Менеджмент отряда».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "kind": "design",
+      "label": "DESIGN «Механики корабельных веток фракций»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Механики корабельных веток фракций».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Система напарников»",
+      "kind": "design",
+      "label": "DESIGN «Система напарников»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Система напарников».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "kind": "design",
+      "label": "DESIGN «Скрытые ветки трансформации»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Скрытые ветки трансформации».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Сюжет и лор»",
+      "kind": "design",
+      "label": "DESIGN «Сюжет и лор»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Сюжет и лор».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "kind": "design",
+      "label": "DESIGN «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "sub": "сформирована, ожидает утверждения",
+      "path": ".workflow/design/DESIGN v1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)».md",
+      "status": "сформирована, ожидает утверждения"
+    },
+    {
+      "id": "DEV-SPEC-017",
+      "kind": "spec",
+      "label": "DEV-SPEC-017 «Ship & Fleet Domain»",
+      "sub": "draft",
+      "path": ".workflow/spec/domain/DEV-SPEC-017 v1.0 — «Ship & Fleet Domain».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-FLEET-001",
+          "SPEC-FLEET-036",
+          "SPEC-FLEET-037",
+          "SPEC-FLEET-042",
+          "GD-03",
+          "GD-04"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-018",
+      "kind": "spec",
+      "label": "DEV-SPEC-018 «Naval Combat Real-time»",
+      "sub": "draft",
+      "path": ".workflow/spec/domain/DEV-SPEC-018 v1.0 — «Naval Combat Real-time».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-FLEET-018",
+          "GD-06",
+          "GD-08"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-019",
+      "kind": "spec",
+      "label": "DEV-SPEC-019 «Doctrine & Branch Unlock»",
+      "sub": "draft",
+      "path": ".workflow/spec/domain/DEV-SPEC-019 v1.0 — «Doctrine & Branch Unlock».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-FLEET-005",
+          "SPEC-FLEET-033",
+          "GD-03"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-020",
+      "kind": "spec",
+      "label": "DEV-SPEC-020 «Market & Trade Core»",
+      "sub": "draft",
+      "path": ".workflow/spec/economy/DEV-SPEC-020 v1.0 — «Market & Trade Core».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ECON-00",
+          "SPEC-ECON-001",
+          "SPEC-ECON-002",
+          "GD-04",
+          "GD-09",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-021",
+      "kind": "spec",
+      "label": "DEV-SPEC-021 «Guilds, Quest Generation & Trade Agents»",
+      "sub": "draft",
+      "path": ".workflow/spec/economy/DEV-SPEC-021 v1.0 — «Guilds, Quest Generation & Trade Agents».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ECON-023",
+          "SPEC-ECON-024",
+          "SPEC-ECON-025",
+          "SPEC-ECON-026",
+          "SPEC-ECON-085",
+          "GD-04",
+          "GD-07",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-022",
+      "kind": "spec",
+      "label": "DEV-SPEC-022 «Investments, Enterprises & Legality»",
+      "sub": "draft",
+      "path": ".workflow/spec/economy/DEV-SPEC-022 v1.0 — «Investments, Enterprises & Legality».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ECON-002",
+          "SPEC-ECON-041",
+          "SPEC-ECON-042",
+          "SPEC-ECON-043",
+          "GD-04",
+          "GD-07",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-001",
+      "kind": "spec",
+      "label": "DEV-SPEC-001 «Core Primitives, Result, DI & Bootstrap»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-001 v1.0 — «Core Primitives, Result, DI & Bootstrap».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "GD-01",
+          "GD-02",
+          "GD-03",
+          "GD-16",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-002",
+      "kind": "spec",
+      "label": "DEV-SPEC-002 «Event Bus & Event Registry»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-002 v1.0 — «Event Bus & Event Registry».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-040",
+          "SPEC-CATA-050",
+          "SPEC-COMBAT-030",
+          "SPEC-COMP-030",
+          "SPEC-ECON-080",
+          "SPEC-EPI-030",
+          "SPEC-FLEET-040",
+          "SPEC-LORE-040",
+          "SPEC-PARTY-030",
+          "SPEC-TRANS-030",
+          "GD-04",
+          "GD-05",
+          "GD-05.1",
+          "GD-06"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-003",
+      "kind": "spec",
+      "label": "DEV-SPEC-003 «Content Registry & JSON Schema Package»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-003 v1.0 — «Content Registry & JSON Schema Package».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "GD-07",
+          "GD-08"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-004",
+      "kind": "spec",
+      "label": "DEV-SPEC-004 «Mechanic Runtime»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-004 v1.0 — «Mechanic Runtime».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-FLEET-010",
+          "SPEC-FLEET-035",
+          "SPEC-FLEET-036",
+          "SPEC-FLEET-037",
+          "SPEC-FLEET-038",
+          "SPEC-FLEET-083"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-005",
+      "kind": "spec",
+      "label": "DEV-SPEC-005 «Seeded RNG Service & Named Streams»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-005 v1.0 — «Seeded RNG Service & Named Streams».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-050",
+          "SPEC-ART-051",
+          "SPEC-CATA-060",
+          "SPEC-CATA-061",
+          "SPEC-COMBAT-040",
+          "SPEC-COMBAT-041",
+          "SPEC-COMP-040",
+          "SPEC-COMP-041",
+          "SPEC-ECON-090",
+          "SPEC-ECON-091",
+          "SPEC-EPI-040",
+          "SPEC-EPI-041",
+          "SPEC-FLEET-041",
+          "SPEC-LORE-050",
+          "SPEC-LORE-051",
+          "SPEC-PARTY-040",
+          "SPEC-PARTY-041",
+          "SPEC-TRANS-040",
+          "SPEC-TRANS-041",
+          "GD-05",
+          "GD-08"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-006",
+      "kind": "spec",
+      "label": "DEV-SPEC-006 «SaveLoad & Memento Composition»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-006 v1.0 — «SaveLoad & Memento Composition».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-060",
+          "SPEC-CATA-070",
+          "SPEC-COMBAT-050",
+          "SPEC-COMP-050",
+          "SPEC-ECON-092",
+          "SPEC-EPI-050",
+          "SPEC-FLEET-070",
+          "SPEC-LORE-060",
+          "SPEC-PARTY-050",
+          "SPEC-TRANS-050",
+          "GD-09",
+          "GD-10"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-007",
+      "kind": "spec",
+      "label": "DEV-SPEC-007 «Game Clock & World Tick Pipeline»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-007 v1.0 — «Game Clock & World Tick Pipeline».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "GD-05",
+          "GD-05.1",
+          "GD-06"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-008",
+      "kind": "spec",
+      "label": "DEV-SPEC-008 «CI Validation Pipeline»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-008 v1.0 — «CI Validation Pipeline».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-070",
+          "SPEC-CATA-080",
+          "SPEC-COMBAT-060",
+          "SPEC-COMP-060",
+          "SPEC-ECON-100",
+          "SPEC-EPI-060",
+          "SPEC-FLEET-080",
+          "SPEC-LORE-070",
+          "SPEC-PARTY-060",
+          "SPEC-TRANS-060",
+          "GD-07",
+          "GD-08"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-009",
+      "kind": "spec",
+      "label": "DEV-SPEC-009 «Localization System»",
+      "sub": "draft",
+      "path": ".workflow/spec/foundational/DEV-SPEC-009 v1.0 — «Localization System».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "GD-07"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-027",
+      "kind": "spec",
+      "label": "DEV-SPEC-027 «Party Management (roster, equipment, morale, salary)»",
+      "sub": "draft",
+      "path": ".workflow/spec/party/DEV-SPEC-027 v1.0 — «Party Management (roster, equipment, morale, salary)».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-PARTY-001",
+          "GD-07",
+          "GD-08",
+          "GD-09"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-010",
+      "kind": "spec",
+      "label": "DEV-SPEC-010 «Scene Manager & Render Pipeline»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-010 v1.0 — «Scene Manager & Render Pipeline».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-002",
+          "GD-01",
+          "GD-02",
+          "GD-11",
+          "GD-12",
+          "GD-13",
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-011",
+      "kind": "spec",
+      "label": "DEV-SPEC-011 «Shader Pipeline & Quality Tiers»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-011 v1.0 — «Shader Pipeline & Quality Tiers».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-001",
+          "SPEC-ART-002",
+          "SPEC-ART-003",
+          "SPEC-ART-021",
+          "SPEC-ART-050",
+          "SPEC-ART-060",
+          "SPEC-ART-070",
+          "SPEC-ART-080",
+          "GD-07",
+          "GD-08",
+          "GD-09",
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-012",
+      "kind": "spec",
+      "label": "DEV-SPEC-012 «VFX Runtime»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-012 v1.0 — «VFX Runtime».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-029",
+          "SPEC-ART-042",
+          "GD-07",
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-013",
+      "kind": "spec",
+      "label": "DEV-SPEC-013 «UI Framework & HUD»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-013 v1.0 — «UI Framework & HUD».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-004",
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-014",
+      "kind": "spec",
+      "label": "DEV-SPEC-014 «Input System & Player Commands»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-014 v1.0 — «Input System & Player Commands».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-015",
+      "kind": "spec",
+      "label": "DEV-SPEC-015 «Audio System»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-015 v1.0 — «Audio System».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-041",
+          "GD-15"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-016",
+      "kind": "spec",
+      "label": "DEV-SPEC-016 «Mobile Adaptation & Performance Budget»",
+      "sub": "draft",
+      "path": ".workflow/spec/presentation/DEV-SPEC-016 v1.0 — «Mobile Adaptation & Performance Budget».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-ART-002",
+          "GD-14"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-023",
+      "kind": "spec",
+      "label": "DEV-SPEC-023 «World Simulation & Political Map»",
+      "sub": "draft",
+      "path": ".workflow/spec/world/DEV-SPEC-023 v1.0 — «World Simulation & Political Map».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-CATA-009",
+          "GD-04",
+          "GD-05",
+          "GD-06",
+          "GD-07",
+          "GD-09",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-024",
+      "kind": "spec",
+      "label": "DEV-SPEC-024 «World Events & Location Changes»",
+      "sub": "draft",
+      "path": ".workflow/spec/world/DEV-SPEC-024 v1.0 — «World Events & Location Changes».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-CATA-002",
+          "SPEC-CATA-003",
+          "SPEC-CATA-028",
+          "GD-05",
+          "GD-06",
+          "GD-07",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-025",
+      "kind": "spec",
+      "label": "DEV-SPEC-025 «Cataclysm Lifecycle & Escalation»",
+      "sub": "draft",
+      "path": ".workflow/spec/world/DEV-SPEC-025 v1.0 — «Cataclysm Lifecycle & Escalation».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-CATA-001",
+          "SPEC-CATA-090",
+          "GD-04",
+          "GD-05",
+          "GD-07",
+          "GD-09",
+          "GD-17"
+        ]
+      }
+    },
+    {
+      "id": "DEV-SPEC-026",
+      "kind": "spec",
+      "label": "DEV-SPEC-026 «Cataclysm Effects & Node Scars»",
+      "sub": "draft",
+      "path": ".workflow/spec/world/DEV-SPEC-026 v1.0 — «Cataclysm Effects & Node Scars».md",
+      "status": "draft",
+      "meta": {
+        "designBlocks": [
+          "SPEC-CATA-008",
+          "SPEC-ECON-038",
+          "GD-04",
+          "GD-07",
+          "GD-17"
+        ]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "INTENT v1.0",
+      "to": "GENERAL DESIGN v1.0",
+      "via": "intent",
+      "detail": "INT: INT-33"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Генератор эпилога»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DESIGN 1.0 — «Менеджмент отряда»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Менеджмент отряда»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Менеджмент отряда»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Менеджмент отряда»",
+      "via": "design"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "via": "intent",
+      "detail": "INT: INT-07, INT-18, INT-19, INT-33.1"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DESIGN 1.0 — «Система напарников»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DESIGN 1.0 — «Система напарников»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DESIGN 1.0 — «Сюжет и лор»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Сюжет и лор»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DESIGN 1.0 — «Сюжет и лор»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DESIGN 1.0 — «Сюжет и лор»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DESIGN 1.0 — «Сюжет и лор»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "via": "design"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "SPEC-FLEET-001"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "SPEC-FLEET-036"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "SPEC-FLEET-037"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "SPEC-FLEET-042"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "GD-03"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-017",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-018",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-019",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-017",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-018",
+      "via": "design",
+      "detail": "GD-06"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-018",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-018",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-018",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-018",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-018",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-019",
+      "via": "design",
+      "detail": "SPEC-FLEET-005"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-019",
+      "via": "design",
+      "detail": "SPEC-FLEET-033"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-019",
+      "via": "design",
+      "detail": "GD-03"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-019",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-019",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-020",
+      "via": "design",
+      "detail": "SPEC-ECON-001"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-020",
+      "via": "design",
+      "detail": "SPEC-ECON-002"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "intent",
+      "detail": "INT-06"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "intent",
+      "detail": "INT-09"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "intent",
+      "detail": "INT-27"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-020",
+      "via": "intent",
+      "detail": "INT-33.2"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-020",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "SPEC-ECON-023"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "SPEC-ECON-024"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "SPEC-ECON-025"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "SPEC-ECON-026"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "SPEC-ECON-085"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-021",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-021",
+      "via": "intent",
+      "detail": "INT-27"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-021",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "SPEC-ECON-002"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "SPEC-ECON-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "SPEC-ECON-042"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "SPEC-ECON-043"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-022",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-022",
+      "via": "intent",
+      "detail": "INT-27"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-022",
+      "via": "intent",
+      "detail": "INT-33.2"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-022",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "DEV-SPEC-022",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-022",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-022",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-001",
+      "via": "design",
+      "detail": "GD-01"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-001",
+      "via": "design",
+      "detail": "GD-02"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-001",
+      "via": "design",
+      "detail": "GD-03"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-001",
+      "via": "design",
+      "detail": "GD-16"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-001",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-001",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-ART-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-CATA-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-COMBAT-030"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-COMP-030"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-ECON-080"
+    },
+    {
+      "from": "DESIGN 1.0 — «Генератор эпилога»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-EPI-030"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-FLEET-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-LORE-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-PARTY-030"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "SPEC-TRANS-030"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "GD-05.1"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-002",
+      "via": "design",
+      "detail": "GD-06"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-002",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-003",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-003",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-003",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-003",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-003",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "DEV-SPEC-003",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "DEV-SPEC-003",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-010"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-035"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-036"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-037"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-038"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-004",
+      "via": "design",
+      "detail": "SPEC-FLEET-083"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-004",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-004",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-004",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "DEV-SPEC-004",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-ART-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-ART-051"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-CATA-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-CATA-061"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-COMBAT-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-COMBAT-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-COMP-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-COMP-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-ECON-090"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-ECON-091"
+    },
+    {
+      "from": "DESIGN 1.0 — «Генератор эпилога»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-EPI-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Генератор эпилога»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-EPI-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-FLEET-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-LORE-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-LORE-051"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-PARTY-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-PARTY-041"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-TRANS-040"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "SPEC-TRANS-041"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-005",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-005",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-006",
+      "to": "DEV-SPEC-005",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-005",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-ART-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-CATA-070"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-COMBAT-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-COMP-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-ECON-092"
+    },
+    {
+      "from": "DESIGN 1.0 — «Генератор эпилога»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-EPI-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-FLEET-070"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-LORE-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-PARTY-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "SPEC-TRANS-050"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-006",
+      "via": "design",
+      "detail": "GD-10"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-006",
+      "via": "intent",
+      "detail": "INT-05"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-006",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-007",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-007",
+      "via": "design",
+      "detail": "GD-05.1"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-007",
+      "via": "design",
+      "detail": "GD-06"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-007",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-ART-070"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-CATA-080"
+    },
+    {
+      "from": "DESIGN 1.0 — «Бой команд на фоне дуэли»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-COMBAT-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Система напарников»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-COMP-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Экономика (цепочки, гильдии, рынки, инвестиции)»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-ECON-100"
+    },
+    {
+      "from": "DESIGN 1.0 — «Генератор эпилога»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-EPI-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Механики корабельных веток фракций»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-FLEET-080"
+    },
+    {
+      "from": "DESIGN 1.0 — «Сюжет и лор»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-LORE-070"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-PARTY-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Скрытые ветки трансформации»",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "SPEC-TRANS-060"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-008",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-008",
+      "via": "intent",
+      "detail": "INT-07"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-008",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-008",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-008",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-005",
+      "to": "DEV-SPEC-008",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-009",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-009",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-009",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-009",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Менеджмент отряда»",
+      "to": "DEV-SPEC-027",
+      "via": "design",
+      "detail": "SPEC-PARTY-001"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "intent",
+      "detail": "INT-21"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "intent",
+      "detail": "INT-22"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "intent",
+      "detail": "INT-30"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-027",
+      "via": "intent",
+      "detail": "INT-33.5"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-008",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-027",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "SPEC-ART-002"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-01"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-02"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-11"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-12"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-13"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-010",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-002",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-003",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-009",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-012",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-014",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-015",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-010",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-001"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-002"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-003"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-021"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-050"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-060"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-070"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "SPEC-ART-080"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "GD-08"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-011",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-012",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-011",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-012",
+      "via": "design",
+      "detail": "SPEC-ART-029"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-012",
+      "via": "design",
+      "detail": "SPEC-ART-042"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-012",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-012",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-012",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-012",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-012",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-012",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-012",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-013",
+      "via": "design",
+      "detail": "SPEC-ART-004"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-013",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-012",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-014",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-013",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-014",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-014",
+      "via": "intent",
+      "detail": "INT-04"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-018",
+      "to": "DEV-SPEC-014",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-015",
+      "via": "design",
+      "detail": "SPEC-ART-041"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-015",
+      "via": "design",
+      "detail": "GD-15"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-007",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-012",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-016",
+      "to": "DEV-SPEC-015",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Арт-дирекшн и шейдеры»",
+      "to": "DEV-SPEC-016",
+      "via": "design",
+      "detail": "SPEC-ART-002"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-016",
+      "via": "design",
+      "detail": "GD-14"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-016",
+      "via": "intent",
+      "detail": "INT-04"
+    },
+    {
+      "from": "DEV-SPEC-004",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-010",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-011",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-012",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-013",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-014",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-015",
+      "to": "DEV-SPEC-016",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "SPEC-CATA-009"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-06"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "intent",
+      "detail": "INT-09"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "intent",
+      "detail": "INT-10"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "intent",
+      "detail": "INT-11"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "intent",
+      "detail": "INT-12"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-023",
+      "via": "intent",
+      "detail": "INT-14"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-021",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-024",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-027",
+      "to": "DEV-SPEC-023",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "SPEC-CATA-002"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "SPEC-CATA-003"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "SPEC-CATA-028"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "GD-06"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "intent",
+      "detail": "INT-13"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-024",
+      "via": "intent",
+      "detail": "INT-29"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-024",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-024",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "DEV-SPEC-024",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-024",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-024",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "SPEC-CATA-001"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "SPEC-CATA-090"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "GD-05"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "GD-09"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "intent",
+      "detail": "INT-13"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-025",
+      "via": "intent",
+      "detail": "INT-15"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-025",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-025",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-025",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-024",
+      "to": "DEV-SPEC-025",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-026",
+      "to": "DEV-SPEC-025",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-026",
+      "via": "design",
+      "detail": "SPEC-CATA-008"
+    },
+    {
+      "from": "DESIGN 1.0 — «Катаклизмы (эскалация, последствия, трансформация)»",
+      "to": "DEV-SPEC-026",
+      "via": "design",
+      "detail": "SPEC-ECON-038"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-026",
+      "via": "design",
+      "detail": "GD-04"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-026",
+      "via": "design",
+      "detail": "GD-07"
+    },
+    {
+      "from": "GENERAL DESIGN v1.0",
+      "to": "DEV-SPEC-026",
+      "via": "design",
+      "detail": "GD-17"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-026",
+      "via": "intent",
+      "detail": "INT-14"
+    },
+    {
+      "from": "INTENT v1.0",
+      "to": "DEV-SPEC-026",
+      "via": "intent",
+      "detail": "INT-15"
+    },
+    {
+      "from": "DEV-SPEC-001",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-017",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-020",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-022",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-023",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-025",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    },
+    {
+      "from": "DEV-SPEC-027",
+      "to": "DEV-SPEC-026",
+      "via": "spec",
+      "detail": "зависит от"
+    }
+  ],
+  "ticketTraces": {},
+  "coverage": {
+    "intents": {
+      "INT-01": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-02": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-03": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-04": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-05": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-06": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-07": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-08": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-09": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-10": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-11": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-12": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-13": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-14": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-15": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-16": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-17": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-18": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-19": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-20": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-21": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-22": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-23": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-24": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-25": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-26": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-27": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-28": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-29": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-30": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-31": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-32": {
+        "specs": [],
+        "tickets": 0
+      },
+      "INT-33": {
+        "specs": [],
+        "tickets": 0
+      }
+    },
+    "specs": {
+      "DEV-SPEC-017": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-018": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-019": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-020": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-021": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-022": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-001": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-002": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-003": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-004": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-005": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-006": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-007": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-008": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-009": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-027": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-010": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-011": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-012": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-013": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-014": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-015": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-016": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-023": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-024": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-025": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      },
+      "DEV-SPEC-026": {
+        "tickets": 0,
+        "requirements": [],
+        "acs": []
+      }
+    },
+    "orphanTickets": [],
+    "orphanSpecs": [
+      "DEV-SPEC-017",
+      "DEV-SPEC-018",
+      "DEV-SPEC-019",
+      "DEV-SPEC-020",
+      "DEV-SPEC-021",
+      "DEV-SPEC-022",
+      "DEV-SPEC-001",
+      "DEV-SPEC-002",
+      "DEV-SPEC-003",
+      "DEV-SPEC-004",
+      "DEV-SPEC-005",
+      "DEV-SPEC-006",
+      "DEV-SPEC-007",
+      "DEV-SPEC-008",
+      "DEV-SPEC-009",
+      "DEV-SPEC-027",
+      "DEV-SPEC-010",
+      "DEV-SPEC-011",
+      "DEV-SPEC-012",
+      "DEV-SPEC-013",
+      "DEV-SPEC-014",
+      "DEV-SPEC-015",
+      "DEV-SPEC-016",
+      "DEV-SPEC-023",
+      "DEV-SPEC-024",
+      "DEV-SPEC-025",
+      "DEV-SPEC-026"
+    ],
+    "danglingRefs": []
+  }
+}
