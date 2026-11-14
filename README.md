@@ -16,6 +16,9 @@ bun run ci:validate -- --reporter=json   # JSON-отчёт
 bun run demo:m2     # контент → механика реагирует
 bun run demo:m3     # 50 тиков → save → load → идентичное продолжение
 bun run demo:full   # полный E2E walking skeleton
+
+bun run trace:build # карта трассировки .workflow → trace/dist/index.html
+bun run trace:check # то же + код 1 при разрывах уровня error
 ```
 
 ## Как проверить M2
@@ -52,6 +55,8 @@ src/
   scripts → scripts/ # демо M2/M3/full
 content/          # packs, events/core.json (30 событий), mechanics/stubs.json (3 stub), schemas (8), locales (en/ru), cross-refs
 tools/ci/         # кли ci:validate, reporters, стадии, правила gameplay, fixtures
+tools/trace/      # сборка карты трассировки .workflow
+.workflow/        # INTENT → GENERAL DESIGN → DESIGN (10) → DEV-SPEC (27) → тикеты (Wave 0 + Wave 3)
 test/             # unit + contract тесты
 ```
 
@@ -65,6 +70,36 @@ test/             # unit + contract тесты
 - **rng-streams** — fixture design-rng-streams.json, дубли, запрет Math.random() в src/domain и src/application.
 - **determinism** — 100 тиков сценария + сравнение с expected.snapshot.json (`--update` для регенерации).
 - **contracts** — bootstrap, content, EventBus публикует core-события, memento-провайдеры, Result-контракт use cases.
+
+## Состояние документации
+
+Статусы `.workflow` актуализированы по коду 2026-11-14:
+
+- `INTENT` и `GENERAL DESIGN` — утверждены;
+- 10 документов `DESIGN v1.0` — ✅ утверждено;
+- `DEV-SPEC-001…009` (Wave 0) — ✅ реализовано, подтверждено `bun run t:check` и `bun run ci:validate`;
+- тикеты M1–M4 (82) — ✅ выполнено, M5–M7 (56) — ⏳ не начато;
+- `DEV-SPEC-010…027` остаются draft: реализации ещё нет.
+
+Подробности и отклонения реализации — в `TICKETS-OVERVIEW` (§12) и `DEV-SPEC-OVERVIEW` (§9).
+
+## Трассировка документации
+
+`bun run trace:build` читает всю папку `.workflow` и строит сквозную цепочку по идентификаторам:
+
+```
+TICKET (TKT-M1-001) → DEV-SPEC (DEV-SPEC-001, §…) → DESIGN-блок (GD-01 / SPEC-ECON-001)
+  → DESIGN-документ → INT-xx → INTENT
+```
+
+Результат — автономная страница `trace/dist/index.html`: дерево с корнем `INTENT` и тикетами на листьях, поиск по ID, карточка узла с цепочкой и ссылками на исходные документы, отчёт о разрывах. Рядом пишется `trace/dist/trace-data.json`.
+
+```bash
+bun run trace:build   # собрать визуализацию
+bun run trace:check   # то же + ненулевой код при разрывах уровня error
+```
+
+Публикация — только вручную: workflow **Traceability Map** (`.github/workflows/trace.yml`, `workflow_dispatch`) собирает карту и деплоит её на GitHub Pages. Перед первым запуском включите Pages: **Settings → Pages → Source = GitHub Actions**.
 
 ## Отклонения от исходных спек (осознанные, Wave 0)
 

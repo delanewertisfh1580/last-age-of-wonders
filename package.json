@@ -12,7 +12,9 @@
     "ci:validate:update": "bun tools/ci/cli.ts --update",
     "demo:m2": "bun scripts/demo-m2.ts",
     "demo:m3": "bun scripts/demo-m3.ts",
-    "demo:full": "bun scripts/demo-full.ts"
+    "demo:full": "bun scripts/demo-full.ts",
+    "trace:build": "bun tools/trace/build-trace.ts",
+    "trace:check": "bun tools/trace/build-trace.ts --strict"
   },
   "dependencies": {
     "ajv": "^8.20.0",
