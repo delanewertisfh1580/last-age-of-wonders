@@ -1,0 +1,24 @@
+{
+  "$id": "production-chain-definition",
+  "type": "object",
+  "required": ["id", "display_name_key", "recipe_ids", "entry_good_ids", "exit_good_ids", "faction_tags", "origin_tags", "validation_rules"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "display_name_key": { "type": "string", "pattern": "^[a-z0-9.\\-]+$" },
+    "recipe_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" } },
+    "entry_good_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" } },
+    "exit_good_ids": { "type": "array", "minItems": 1, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" } },
+    "faction_tags": { "type": "array", "items": { "type": "string" } },
+    "origin_tags": { "type": "array", "items": { "enum": ["science", "magic", "hybrid", "neutral"] } },
+    "validation_rules": {
+      "type": "object",
+      "required": ["acyclic", "connected"],
+      "properties": {
+        "acyclic": { "const": true },
+        "connected": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

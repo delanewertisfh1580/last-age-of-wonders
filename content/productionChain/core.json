@@ -1,0 +1,32 @@
+[
+  {
+    "id": "steam-works",
+    "display_name_key": "chain.steam-works.name",
+    "recipe_ids": ["smelt-steel", "craft-optics", "assemble-engine"],
+    "entry_good_ids": ["coal"],
+    "exit_good_ids": ["steam-engine"],
+    "faction_tags": ["industrial-steam"],
+    "origin_tags": ["science"],
+    "validation_rules": { "acyclic": true, "connected": true }
+  },
+  {
+    "id": "arcane-flow",
+    "display_name_key": "chain.arcane-flow.name",
+    "recipe_ids": ["crystallize-mana", "brew-enchant-ink"],
+    "entry_good_ids": ["aether-dust"],
+    "exit_good_ids": ["enchant-ink"],
+    "faction_tags": ["ancient-arcane"],
+    "origin_tags": ["magic"],
+    "validation_rules": { "acyclic": true, "connected": true }
+  },
+  {
+    "id": "necro-synthesis",
+    "display_name_key": "chain.necro-synthesis.name",
+    "recipe_ids": ["ferment-graft-fluid", "craft-spirit-lantern", "synthesize-anima"],
+    "entry_good_ids": ["bone-ash", "optics"],
+    "exit_good_ids": ["anima-totem"],
+    "faction_tags": ["necromantic-corpse", "living-artifact"],
+    "origin_tags": ["magic", "science", "hybrid"],
+    "validation_rules": { "acyclic": true, "connected": true }
+  }
+]

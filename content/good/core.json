@@ -1,0 +1,142 @@
+[
+  {
+    "id": "coal",
+    "display_name_key": "good.coal.name",
+    "tier": "raw",
+    "origin": "science",
+    "tags": ["flammable", "bulky"],
+    "base_price_policy_id": "pc-coal",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-coal"
+  },
+  {
+    "id": "steel-plate",
+    "display_name_key": "good.steel-plate.name",
+    "tier": "intermediate",
+    "origin": "science",
+    "tags": ["bulky"],
+    "base_price_policy_id": "pc-steel-plate",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-steel-plate"
+  },
+  {
+    "id": "steam-engine",
+    "display_name_key": "good.steam-engine.name",
+    "tier": "final",
+    "origin": "science",
+    "tags": ["sealed"],
+    "base_price_policy_id": "pc-steam-engine",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-steam-engine"
+  },
+  {
+    "id": "optics",
+    "display_name_key": "good.optics.name",
+    "tier": "intermediate",
+    "origin": "science",
+    "tags": ["sealed"],
+    "base_price_policy_id": "pc-optics",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-optics"
+  },
+  {
+    "id": "aether-dust",
+    "display_name_key": "good.aether-dust.name",
+    "tier": "raw",
+    "origin": "magic",
+    "tags": ["volatile"],
+    "base_price_policy_id": "pc-aether-dust",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-aether-dust"
+  },
+  {
+    "id": "mana-crystal",
+    "display_name_key": "good.mana-crystal.name",
+    "tier": "intermediate",
+    "origin": "magic",
+    "tags": ["ritual-warded"],
+    "base_price_policy_id": "pc-mana-crystal",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-mana-crystal"
+  },
+  {
+    "id": "enchant-ink",
+    "display_name_key": "good.enchant-ink.name",
+    "tier": "final",
+    "origin": "magic",
+    "tags": ["sealed"],
+    "base_price_policy_id": "pc-enchant-ink",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-enchant-ink"
+  },
+  {
+    "id": "bone-ash",
+    "display_name_key": "good.bone-ash.name",
+    "tier": "raw",
+    "origin": "magic",
+    "tags": ["bulky"],
+    "base_price_policy_id": "pc-bone-ash",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-bone-ash"
+  },
+  {
+    "id": "graft-vat-fluid",
+    "display_name_key": "good.graft-vat-fluid.name",
+    "tier": "intermediate",
+    "origin": "magic",
+    "tags": ["perishable", "ritual-warded"],
+    "base_price_policy_id": "pc-graft-vat-fluid",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-graft-vat-fluid"
+  },
+  {
+    "id": "spirit-lantern",
+    "display_name_key": "good.spirit-lantern.name",
+    "tier": "final",
+    "origin": "magic",
+    "tags": ["ritual-warded", "sealed"],
+    "base_price_policy_id": "pc-spirit-lantern",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-spirit-lantern"
+  },
+  {
+    "id": "biomass-husk",
+    "display_name_key": "good.biomass-husk.name",
+    "tier": "raw",
+    "origin": "hybrid",
+    "tags": ["perishable", "bulky"],
+    "base_price_policy_id": "pc-biomass-husk",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-biomass-husk"
+  },
+  {
+    "id": "living-symbiote",
+    "display_name_key": "good.living-symbiote.name",
+    "tier": "strategic",
+    "origin": "hybrid",
+    "tags": ["perishable", "sealed", "volatile"],
+    "base_price_policy_id": "pc-living-symbiote",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-living-symbiote"
+  },
+  {
+    "id": "anima-totem",
+    "display_name_key": "good.anima-totem.name",
+    "tier": "final",
+    "origin": "hybrid",
+    "tags": ["ritual-warded", "sealed"],
+    "base_price_policy_id": "pc-anima-totem",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-anima-totem"
+  },
+  {
+    "id": "research-notes",
+    "display_name_key": "good.research-notes.name",
+    "tier": "contraband",
+    "origin": "neutral",
+    "tags": ["sealed"],
+    "base_price_policy_id": "pc-research-notes",
+    "contraband_in": [],
+    "unit_mass_policy_id": "mass-research-notes"
+  }
+]

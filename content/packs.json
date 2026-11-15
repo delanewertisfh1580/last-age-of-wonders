@@ -13,6 +13,21 @@
       "kinds": ["mechanic"],
       "files": ["mechanics/stubs.json"],
       "dependencies": ["core-events"]
+    },
+    {
+      "id": "economy-core",
+      "version": "1.0.0",
+      "kinds": ["good", "recipe", "productionChain", "tradeNode", "tradeRoute", "market", "priceModifier"],
+      "files": [
+        "good/core.json",
+        "recipe/core.json",
+        "productionChain/core.json",
+        "tradeNode/core.json",
+        "tradeRoute/core.json",
+        "market/core.json",
+        "priceModifier/core.json"
+      ],
+      "dependencies": ["core-events", "core-mechanics"]
     }
   ]
 }

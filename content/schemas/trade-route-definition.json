@@ -1,0 +1,16 @@
+{
+  "$id": "trade-route-definition",
+  "type": "object",
+  "required": ["id", "display_name_key", "from_node_id", "to_node_id", "distance_policy_id", "risk_policy_id", "blocked_by_tags", "legality_policy_id"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "display_name_key": { "type": "string", "pattern": "^[a-z0-9.\\-]+$" },
+    "from_node_id": { "type": "string" },
+    "to_node_id": { "type": "string" },
+    "distance_policy_id": { "type": "string" },
+    "risk_policy_id": { "type": "string" },
+    "blocked_by_tags": { "type": "array", "items": { "type": "string" } },
+    "legality_policy_id": { "type": "string" }
+  },
+  "additionalProperties": false
+}

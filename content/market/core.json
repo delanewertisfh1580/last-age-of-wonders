@@ -1,0 +1,122 @@
+[
+  {
+    "id": "market-steam-capital",
+    "node_id": "steam-capital",
+    "regional_index_id": "region-core",
+    "price_clamps_policy_id": "clamp-steam-capital",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-arcane-capital",
+    "node_id": "arcane-capital",
+    "regional_index_id": "region-core",
+    "price_clamps_policy_id": "clamp-arcane-capital",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-necro-capital",
+    "node_id": "necro-capital",
+    "regional_index_id": "region-core",
+    "price_clamps_policy_id": "clamp-necro-capital",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-living-capital",
+    "node_id": "living-capital",
+    "regional_index_id": "region-core",
+    "price_clamps_policy_id": "clamp-living-capital",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-steel-port",
+    "node_id": "steel-port",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-steel-port",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-arcanum-port",
+    "node_id": "arcanum-port",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-arcanum-port",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-ossuary-port",
+    "node_id": "ossuary-port",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-ossuary-port",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-symbiote-port",
+    "node_id": "symbiote-port",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-symbiote-port",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-crossroads",
+    "node_id": "crossroads",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-crossroads",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-freeport",
+    "node_id": "freeport",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-freeport",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-emerald-harbor",
+    "node_id": "emerald-harbor",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-emerald-harbor",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  },
+  {
+    "id": "market-abyss-harbor",
+    "node_id": "abyss-harbor",
+    "regional_index_id": "region-frontier",
+    "price_clamps_policy_id": "clamp-abyss-harbor",
+    "transaction_cost_policy_id": "fee-standard",
+    "consumption_policy_id": "consumption-standard",
+    "saturation_policy_id": "saturation-standard",
+    "reversion_policy_id": "reversion-standard"
+  }
+]

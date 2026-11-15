@@ -1,0 +1,88 @@
+[
+  {
+    "id": "smelt-steel",
+    "display_name_key": "recipe.smelt-steel.name",
+    "kind": "refinement",
+    "inputs": [{ "good_id": "coal", "quantity_policy_id": "qty-2" }],
+    "outputs": [{ "good_id": "steel-plate", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["science"],
+    "duration_policy_id": "duration-smelt-steel"
+  },
+  {
+    "id": "craft-optics",
+    "display_name_key": "recipe.craft-optics.name",
+    "kind": "refinement",
+    "inputs": [{ "good_id": "coal", "quantity_policy_id": "qty-1" }],
+    "outputs": [{ "good_id": "optics", "quantity_policy_id": "qty-2" }],
+    "origin_tags": ["science"],
+    "duration_policy_id": "duration-craft-optics"
+  },
+  {
+    "id": "assemble-engine",
+    "display_name_key": "recipe.assemble-engine.name",
+    "kind": "production",
+    "inputs": [
+      { "good_id": "steel-plate", "quantity_policy_id": "qty-1" },
+      { "good_id": "optics", "quantity_policy_id": "qty-2" }
+    ],
+    "outputs": [{ "good_id": "steam-engine", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["science"],
+    "duration_policy_id": "duration-assemble-engine"
+  },
+  {
+    "id": "crystallize-mana",
+    "display_name_key": "recipe.crystallize-mana.name",
+    "kind": "refinement",
+    "inputs": [{ "good_id": "aether-dust", "quantity_policy_id": "qty-2" }],
+    "outputs": [{ "good_id": "mana-crystal", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["magic"],
+    "duration_policy_id": "duration-crystallize-mana"
+  },
+  {
+    "id": "brew-enchant-ink",
+    "display_name_key": "recipe.brew-enchant-ink.name",
+    "kind": "production",
+    "inputs": [
+      { "good_id": "mana-crystal", "quantity_policy_id": "qty-1" },
+      { "good_id": "aether-dust", "quantity_policy_id": "qty-1" }
+    ],
+    "outputs": [{ "good_id": "enchant-ink", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["magic"],
+    "duration_policy_id": "duration-brew-enchant-ink"
+  },
+  {
+    "id": "ferment-graft-fluid",
+    "display_name_key": "recipe.ferment-graft-fluid.name",
+    "kind": "refinement",
+    "inputs": [{ "good_id": "bone-ash", "quantity_policy_id": "qty-3" }],
+    "outputs": [{ "good_id": "graft-vat-fluid", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["magic"],
+    "duration_policy_id": "duration-ferment-graft-fluid"
+  },
+  {
+    "id": "craft-spirit-lantern",
+    "display_name_key": "recipe.craft-spirit-lantern.name",
+    "kind": "production",
+    "inputs": [
+      { "good_id": "graft-vat-fluid", "quantity_policy_id": "qty-1" },
+      { "good_id": "bone-ash", "quantity_policy_id": "qty-2" }
+    ],
+    "outputs": [{ "good_id": "spirit-lantern", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["magic"],
+    "duration_policy_id": "duration-craft-spirit-lantern"
+  },
+  {
+    "id": "synthesize-anima",
+    "display_name_key": "recipe.synthesize-anima.name",
+    "kind": "conversion",
+    "inputs": [
+      { "good_id": "spirit-lantern", "quantity_policy_id": "qty-1" },
+      { "good_id": "optics", "quantity_policy_id": "qty-1" }
+    ],
+    "outputs": [{ "good_id": "anima-totem", "quantity_policy_id": "qty-1" }],
+    "origin_tags": ["science", "magic"],
+    "duration_policy_id": "duration-synthesize-anima",
+    "loss_fraction_policy_id": "loss-conversion",
+    "risk_policy_id": "risk-conversion"
+  }
+]

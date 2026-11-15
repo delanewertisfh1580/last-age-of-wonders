@@ -24,6 +24,14 @@ function schemaNameForKind(kind: ContentKind): string {
   const known: Partial<Record<ContentKind, string>> = {
     event: 'event-definition',
     mechanic: 'mechanic-definition',
+    // TKT-M5-001: маппинг kind → схема для экономики (§4.2 DEV-SPEC-020).
+    good: 'good-definition',
+    recipe: 'recipe-definition',
+    productionChain: 'production-chain-definition',
+    tradeNode: 'trade-node-definition',
+    tradeRoute: 'trade-route-definition',
+    market: 'market-definition',
+    priceModifier: 'price-modifier',
   };
   return known[kind] ?? 'generic-content';
 }

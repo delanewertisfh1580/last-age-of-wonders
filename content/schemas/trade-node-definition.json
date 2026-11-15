@@ -1,0 +1,27 @@
+{
+  "$id": "trade-node-definition",
+  "type": "object",
+  "required": ["id", "display_name_key", "faction_id", "economy_doctrine_id", "port_tier", "market_id", "enterprise_ids", "guild_chapter_ids", "scar_ids", "legality_policy_id", "position"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "display_name_key": { "type": "string", "pattern": "^[a-z0-9.\\-]+$" },
+    "faction_id": { "type": "string" },
+    "economy_doctrine_id": { "type": "string" },
+    "port_tier": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "market_id": { "type": "string" },
+    "enterprise_ids": { "type": "array", "items": { "type": "string" } },
+    "guild_chapter_ids": { "type": "array", "items": { "type": "string" } },
+    "scar_ids": { "type": "array", "items": { "type": "string" } },
+    "legality_policy_id": { "type": "string" },
+    "position": {
+      "type": "object",
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

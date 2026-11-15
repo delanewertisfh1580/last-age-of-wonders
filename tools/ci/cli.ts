@@ -4,6 +4,7 @@
  * Запуск: bun tools/ci/cli.ts [--stage=name] [--reporter=console|json] [--continue-on-error] [--update]
  */
 import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { ALL_STAGES, passed, type StageResult, type ValidationStage } from './types.js';
 import { makeReporter } from './reporters/index.js';
 import { validateSchemas } from './stages/validate-schemas.js';
@@ -127,6 +128,6 @@ async function entry(): Promise<void> {
   process.exitCode = await main();
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   await entry();
 }

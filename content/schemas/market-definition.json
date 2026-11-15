@@ -1,0 +1,16 @@
+{
+  "$id": "market-definition",
+  "type": "object",
+  "required": ["id", "node_id", "regional_index_id", "price_clamps_policy_id", "transaction_cost_policy_id", "consumption_policy_id", "saturation_policy_id", "reversion_policy_id"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "node_id": { "type": "string" },
+    "regional_index_id": { "type": "string" },
+    "price_clamps_policy_id": { "type": "string" },
+    "transaction_cost_policy_id": { "type": "string" },
+    "consumption_policy_id": { "type": "string" },
+    "saturation_policy_id": { "type": "string" },
+    "reversion_policy_id": { "type": "string" }
+  },
+  "additionalProperties": false
+}

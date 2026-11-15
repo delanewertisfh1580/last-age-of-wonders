@@ -8,6 +8,14 @@ import { readContentFiles } from './common.js';
 const KIND_SCHEMAS: Record<string, string> = {
   event: 'event-definition',
   mechanic: 'mechanic-definition',
+  // TKT-M5-001: стадия schemas валидирует новые kind'ы экономики своими схемами.
+  good: 'good-definition',
+  recipe: 'recipe-definition',
+  productionChain: 'production-chain-definition',
+  tradeNode: 'trade-node-definition',
+  tradeRoute: 'trade-route-definition',
+  market: 'market-definition',
+  priceModifier: 'price-modifier',
 };
 
 /** TKT-M4-004: стадия schemas — AJV-валидация всех файлов контента. */

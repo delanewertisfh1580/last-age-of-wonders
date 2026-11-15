@@ -13,6 +13,15 @@ const SCHEMA_FILES: readonly [string, string][] = [
   ['locale-file', 'schemas/locale-file.json'],
   ['content-pack', 'schemas/content-pack.json'],
   ['generic-content', 'schemas/content-pack.json'],
+  // TKT-M5-001: схемы экономики из §6.2 DEV-SPEC-020.
+  ['good-definition', 'schemas/good-definition.json'],
+  ['recipe-definition', 'schemas/recipe-definition.json'],
+  ['production-chain-definition', 'schemas/production-chain-definition.json'],
+  ['trade-node-definition', 'schemas/trade-node-definition.json'],
+  ['trade-route-definition', 'schemas/trade-route-definition.json'],
+  ['market-definition', 'schemas/market-definition.json'],
+  ['market-state', 'schemas/market-state.json'],
+  ['price-modifier', 'schemas/price-modifier.json'],
 ];
 
 export type SchemasBag = Record<string, object>;

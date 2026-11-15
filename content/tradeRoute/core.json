@@ -1,0 +1,162 @@
+[
+  {
+    "id": "route-steam-arcane",
+    "display_name_key": "route.route-steam-arcane.name",
+    "from_node_id": "steam-capital",
+    "to_node_id": "arcane-capital",
+    "distance_policy_id": "distance-long",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-arcane-necro",
+    "display_name_key": "route.route-arcane-necro.name",
+    "from_node_id": "arcane-capital",
+    "to_node_id": "necro-capital",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-necro-living",
+    "display_name_key": "route.route-necro-living.name",
+    "from_node_id": "necro-capital",
+    "to_node_id": "living-capital",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-living-steel",
+    "display_name_key": "route.route-living-steel.name",
+    "from_node_id": "living-capital",
+    "to_node_id": "steel-port",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-steel-arcanum",
+    "display_name_key": "route.route-steel-arcanum.name",
+    "from_node_id": "steel-port",
+    "to_node_id": "arcanum-port",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-arcanum-ossuary",
+    "display_name_key": "route.route-arcanum-ossuary.name",
+    "from_node_id": "arcanum-port",
+    "to_node_id": "ossuary-port",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-ossuary-symbiote",
+    "display_name_key": "route.route-ossuary-symbiote.name",
+    "from_node_id": "ossuary-port",
+    "to_node_id": "symbiote-port",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-symbiote-crossroads",
+    "display_name_key": "route.route-symbiote-crossroads.name",
+    "from_node_id": "symbiote-port",
+    "to_node_id": "crossroads",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-crossroads-freeport",
+    "display_name_key": "route.route-crossroads-freeport.name",
+    "from_node_id": "crossroads",
+    "to_node_id": "freeport",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-freeport-emerald",
+    "display_name_key": "route.route-freeport-emerald.name",
+    "from_node_id": "freeport",
+    "to_node_id": "emerald-harbor",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-emerald-abyss",
+    "display_name_key": "route.route-emerald-abyss.name",
+    "from_node_id": "emerald-harbor",
+    "to_node_id": "abyss-harbor",
+    "distance_policy_id": "distance-mid",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-abyss-steam",
+    "display_name_key": "route.route-abyss-steam.name",
+    "from_node_id": "abyss-harbor",
+    "to_node_id": "steam-capital",
+    "distance_policy_id": "distance-long",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-steam-crossroads",
+    "display_name_key": "route.route-steam-crossroads.name",
+    "from_node_id": "steam-capital",
+    "to_node_id": "crossroads",
+    "distance_policy_id": "distance-short",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-arcane-freeport",
+    "display_name_key": "route.route-arcane-freeport.name",
+    "from_node_id": "arcane-capital",
+    "to_node_id": "freeport",
+    "distance_policy_id": "distance-short",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-necro-emerald",
+    "display_name_key": "route.route-necro-emerald.name",
+    "from_node_id": "necro-capital",
+    "to_node_id": "emerald-harbor",
+    "distance_policy_id": "distance-short",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  },
+  {
+    "id": "route-living-abyss",
+    "display_name_key": "route.route-living-abyss.name",
+    "from_node_id": "living-capital",
+    "to_node_id": "abyss-harbor",
+    "distance_policy_id": "distance-short",
+    "risk_policy_id": "risk-travel",
+    "blocked_by_tags": [],
+    "legality_policy_id": "legality-open"
+  }
+]

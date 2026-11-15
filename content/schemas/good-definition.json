@@ -1,0 +1,16 @@
+{
+  "$id": "good-definition",
+  "type": "object",
+  "required": ["id", "display_name_key", "tier", "origin", "tags", "base_price_policy_id", "contraband_in", "unit_mass_policy_id"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "display_name_key": { "type": "string", "pattern": "^[a-z0-9.\\-]+$" },
+    "tier": { "enum": ["raw", "intermediate", "final", "contraband", "strategic"] },
+    "origin": { "enum": ["science", "magic", "hybrid", "neutral"] },
+    "tags": { "type": "array", "items": { "enum": ["perishable", "ritual-warded", "sealed", "bulky", "volatile", "flammable"] } },
+    "base_price_policy_id": { "type": "string" },
+    "contraband_in": { "type": "array", "items": { "type": "string" } },
+    "unit_mass_policy_id": { "type": "string" }
+  },
+  "additionalProperties": false
+}

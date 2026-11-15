@@ -1,0 +1,11 @@
+{
+  "$id": "price-modifier",
+  "type": "object",
+  "required": ["id", "kind", "params"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "kind": { "enum": ["price-clamps", "transaction-cost", "saturation", "reversion", "consumption", "quantity", "duration", "distance", "risk"] },
+    "params": { "type": "object" }
+  },
+  "additionalProperties": false
+}
