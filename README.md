@@ -1,6 +1,6 @@
 # «Наука против Магии» — walking skeleton (Wave 0)
 
-Скелет по тикетам Wave 0 (вехи M1–M4). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema.
+«Наука против Магии» — тикеты для всех волн (M1–M22), 267 тикетов. Wave 0 реализован (82 тикета), Waves 1–5 — планирование (185 тикетов). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema.
 
 ## Скрипты
 
@@ -16,6 +16,22 @@ bun run ci:validate -- --reporter=json   # JSON-отчёт
 bun run demo:m2     # контент → механика реагирует
 bun run demo:m3     # 50 тиков → save → load → идентичное продолжение
 bun run demo:full   # полный E2E walking skeleton
+bun run demo:m5     # (W5) экономика → сделка → save/load
+bun run demo:m8     # (W1-P) сцена/рендер пайплайн
+bun run demo:m9     # (W1-P) шейдеры + quality tiers
+bun run demo:m10    # (W1-P) UI framework & HUD
+bun run demo:m11    # (W1-P) ввод + команды
+bun run demo:m12    # (W1-P) аудио
+bun run demo:m13    # (W1-P) VFX runtime
+bun run demo:m14    # (W1-P) мобильная адаптация
+bun run demo:m15    # (W2) флот и фракции
+bun run demo:m16    # (W2) морской бой
+bun run demo:m17    # (W2) доктрины и ветки
+bun run demo:m18    # (W4) мир и политическая карта
+bun run demo:m19    # (W4) мировые события и локации
+bun run demo:m20    # (W4) катаклизмы: lifecycle и escalation
+bun run demo:m21    # (W4) катаклизмы: эффекты и шрамы
+bun run demo:m22    # (W5) отряд: найм, экипировка, мораль, зарплата
 
 bun run trace:build # карта трассировки .workflow → trace/dist/index.html
 bun run trace:check # то же + код 1 при разрывах уровня error
@@ -56,7 +72,7 @@ src/
 content/          # packs, events/core.json (30 событий), mechanics/stubs.json (3 stub), schemas (8), locales (en/ru), cross-refs
 tools/ci/         # кли ci:validate, reporters, стадии, правила gameplay, fixtures
 tools/trace/      # сборка карты трассировки .workflow
-.workflow/        # INTENT → GENERAL DESIGN → DESIGN (10) → DEV-SPEC (27) → тикеты (Wave 0 + Wave 3)
+.workflow/        # INTENT → GENERAL DESIGN → DESIGN (10) → DEV-SPEC (27) → тикеты (267: M1–M22, Waves 0–5)
 test/             # unit + contract тесты
 ```
 
@@ -78,8 +94,9 @@ test/             # unit + contract тесты
 - `INTENT` и `GENERAL DESIGN` — утверждены;
 - 10 документов `DESIGN v1.0` — ✅ утверждено;
 - `DEV-SPEC-001…009` (Wave 0) — ✅ реализовано, подтверждено `bun run t:check` и `bun run ci:validate`;
-- тикеты M1–M4 (82) — ✅ выполнено, M5–M7 (56) — ⏳ не начато;
-- `DEV-SPEC-010…027` остаются draft: реализации ещё нет.
+- тикеты M1–M4 (82) — ✅ выполнено; M5–M7 (56) — ⏳ не начато; M8–M22 (185) — ⏳ не начато (тикеты созданы).
+- `DEV-SPEC-010…027` — draft, тикеты созданы, реализации ещё нет.
+- Спеки `DEV-SPEC-028…039` — ещё не созданы; тикеты для Waves 6–8 не создаются (0 тикетов).
 
 Подробности и отклонения реализации — в `TICKETS-OVERVIEW` (§12) и `DEV-SPEC-OVERVIEW` (§9).
 

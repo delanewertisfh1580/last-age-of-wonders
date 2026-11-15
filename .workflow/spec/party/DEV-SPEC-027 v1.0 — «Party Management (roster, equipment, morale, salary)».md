@@ -8,7 +8,7 @@
 **Блокирует:** `DEV-SPEC-028`, `DEV-SPEC-029`, `DEV-SPEC-030`, `DEV-SPEC-031`, `DEV-SPEC-033`, `DEV-SPEC-034`, `DEV-SPEC-039`
 **Основана на:** `DESIGN v1.0 — «Менеджмент отряда»` (SPEC-PARTY-001…017, 020…024, 030…032, 040…041, 050…051, 060…063, 070…071, 080), `GENERAL DESIGN v1.0` (GD-07, GD-08, GD-09), `INTENT` (INT-21, INT-22, INT-30, INT-33.5)
 **Связанные DEV-SPEC:** `DEV-SPEC-008` (CI-стадии), `DEV-SPEC-009` (локализация display-ключей), `DEV-SPEC-017` (реализация `IPartyPersonnelPort`, события `fleet.*`), `DEV-SPEC-025/026` (шрамы катаклизмов → party-реакции), `DEV-SPEC-036` (`IEpilogueFactPort` — будущий владелец контракта), `DEV-SPEC-021/022` (прецедент port-stub'ов в экономике)
-**Порождает веху:** `TICKETS-M8` (см. §17 и `TICKET-TEMPLATE v1.0`)
+**Порождает веху:** `TICKETS-M22` (см. §17 и `TICKET-TEMPLATE v1.0`)
 
 ---
 
@@ -37,7 +37,7 @@
 - **RNG**: четыре именованных потока `rng.party.*`;
 - **сохранения**: полный снимок `PartyInstance` через Memento (`domainId: 'party'`) + схема `party-state.json`;
 - **CI**: расширение стадий schema/graph/gameplay-lint на контент отряда (`validate-party-graph.ts`, `validate-party-lint.ts`);
-- **контент первой волны**: 3 напарника (industrial-steam / ancient-arcane / necromantic-corpse), 10 предметов экипировки, вертикальный срез SPEC-PARTY-080, демо `demo:m8`.
+- **контент первой волны**: 3 напарника (industrial-steam / ancient-arcane / necromantic-corpse), 10 предметов экипировки, вертикальный срез SPEC-PARTY-080, демо `demo:m22`.
 
 ### 1.2. Что спецификация НЕ делает
 
@@ -77,7 +77,7 @@
 | `SPEC-PARTY-050/051` (сохранения, валидация загрузки) | §5.4, §8.3, R14 | нет |
 | `SPEC-PARTY-060…063` (валидация) | §12/T15-T16, R15 | нет |
 | `SPEC-PARTY-070/071` (скелеты первой волны) | пакет `party-core`, R16 | нет |
-| `SPEC-PARTY-080` (вертикальный срез) | §11-R16/§12-T14 demo:m8, R16 | нет |
+| `SPEC-PARTY-080` (вертикальный срез) | §11-R16/§12-T14 demo:m22, R16 | нет |
 | `GD-07/GD-08` (контент как данные) | §4, §6 | нет |
 | `GD-09` (Memento) | §5.4 | нет |
 | `INT-21/22/30/33.5` | весь документ | нет |
@@ -137,7 +137,7 @@
 | Personal Arc | Линейная машина состояний личной сюжетной линии напарника; продвижение — `party.personal_arc_advanced` |
 | Reaction Policy | Данные: набор правил `(триггер-событие, условие) → (эффекты настроения/морали/шрама/факта)` |
 | Effective Stats | `current_stats` + суммарные `stat_modifiers` надетой экипировки; производная величина, не хранится в снимке |
-| Vertical Slice | Нормативный срез SPEC-PARTY-080, собираемый в `demo:m8` |
+| Vertical Slice | Нормативный срез SPEC-PARTY-080, собираемый в `demo:m22` |
 
 ---
 
@@ -207,7 +207,7 @@ tools/ci/stages/
 ├── validate-party-graph.ts
 └── validate-party-lint.ts
 test/party/                            // unit/integration/contract/determinism + fixtures/negative/
-scripts/demo-m8.ts                     // bun run demo:m8
+scripts/demo-m22.ts                     // bun run demo:m22
 ```
 
 > **Примечание registry (обязательно к исполнению, аналог Q-04 в 020).** Действующий `JsonContentRegistry` определяет kind по имени директории и валидирует неизвестные kinds generic-схемой. Для 027: расширить `DIR_TO_KIND` директориями `companion`, `equipment`, `partyStructurePolicy`, `partyPolicy`; расширить `schemaNameForKind`: `companion → companion-definition`, `equipment → equipment-definition`, `partyStructurePolicy → party-structure-policy`, `partyPolicy → party-policy`. Политики (morale/maintenance/salary/reaction/personalArc/skillProgression/acquisition/relationshipThresholds) хранятся как записки kind `partyPolicy` с дискриминатором `kind` внутри (generic-обёртка по прецеденту §6.3 020) — это сознательное упрощение против отдельных kinds ради минимального диффа registry; при необходимости разнесётся в Wave 6 (OQ-09). Новые значения `ContentKind` (`partyStructurePolicy`, `partyPolicy`) добавляются в enum Wave 0 — additive change. `party-state.json` валидируется memento-путём (006), не registry.
@@ -443,7 +443,7 @@ export interface PartyInstance {
 
 ### 6.2. JSON Schema (`content/schemas/`)
 
-Ключевые ограничения (полные тела — artifact тикета `TKT-M8-001`; стиль — 020 §6.2):
+Ключевые ограничения (полные тела — artifact тикета `TKT-M22-001`; стиль — 020 §6.2):
 
 - `companion-definition.json`: `required: [id, display_name_key, description_key, base_stats, mechanic_ids, relationship_tree_policy_id, personal_arc_policy_id, acquisition_policy_id, progression_policy_id, equipment_policy_id, maintenance_policy_id, salary_policy_id, reaction_policy_id, vulnerability_tags, counterplay_tags]`; `additionalProperties: false`; `mechanic_ids.minItems: 2`; `counterplay_tags.minItems: 1`; `id: {"pattern": "^[a-z0-9][a-z0-9-]*$"}`; `base_stats.required: [hp, strength, agility, endurance]`, значения `≥ 0`.
 - `equipment-definition.json`: `slot: {"enum": ["weapon","armor","helmet","accessory","consumable"]}`; `good_id` обязателен; `stat_modifiers` — object of numbers; `additionalProperties: false`.
@@ -781,7 +781,7 @@ Invariant: PARTY-INV-06…11.
 
 ### `DEV-SPEC-027-R16` — Вертикальный срез первой волны
 Требование: 3 напарника × (механики, экипировка 10 предметов, мораль, шрамы, арки, реакции) + мосты combat/economy/cataclysm/narrative собираются в демо (SPEC-PARTY-070/071/080).
-- AC26: `bun run demo:m8` завершается `Ok`: найм 3 → покупка/экипировка 10 предметов → 20 тактов (maintenance/salary) → synthetic cataclysm-effect (mood+scar) → synthetic combat-loss (wounded→died одного) → save/load → идентичное продолжение 10 тактов; журнал содержит ≥1 запись каждого ключевого topic среза.
+- AC26: `bun run demo:m22` завершается `Ok`: найм 3 → покупка/экипировка 10 предметов → 20 тактов (maintenance/salary) → synthetic cataclysm-effect (mood+scar) → synthetic combat-loss (wounded→died одного) → save/load → идентичное продолжение 10 тактов; журнал содержит ≥1 запись каждого ключевого topic среза.
 
 ### `DEV-SPEC-027-R17` — Детерминизм
 Требование: одинаковый seed ⇒ идентичный прогон независимо от пути загрузки (SPEC-PARTY-040).
@@ -806,11 +806,11 @@ Invariant: PARTY-INV-06…11.
 | Contract | T11 | companion-mechanics против `mechanic-definition.json` | ci:graph |
 | Determinism | T12 | save/load/replay party-сценария | ci:determinism |
 | Determinism | T13 | изоляция 4 rng-потоков; grep Math.random/Date.now | ci:rng-streams |
-| E2E | T14 | demo:m8 (сценарий AC26) | script |
+| E2E | T14 | demo:m22 (сценарий AC26) | script |
 | CI | T15 | `validate-party-graph.ts` | tools/ci |
 | CI | T16 | `validate-party-lint.ts` (counterplay≥1, arc exists, reaction≥1, dup ids, cycle refs) | tools/ci |
 
-Покрытие: каждый AC01…AC27 присутствует минимум в одном тесте; матрица AC↔T ведётся в `TICKETS-M8`. Negative-fixtures — `test/party/fixtures/negative/`.
+Покрытие: каждый AC01…AC27 присутствует минимум в одном тесте; матрица AC↔T ведётся в `TICKETS-M22`. Negative-fixtures — `test/party/fixtures/negative/`.
 
 ---
 
@@ -839,7 +839,7 @@ Invariant: PARTY-INV-06…11.
 |---|---|---|---|---|
 | OQ-01 | Поправка DESIGN SPEC-PARTY-032 (имена мостовых событий, §1.3 п.1) | нет (спека нормативна) | design | до review Wave 5 |
 | OQ-02 | Полная семантика конверсии пленных — объём 028 | нет | arch | при генерации 028 |
-| OQ-03 | Источник ранений до выхода 029 (proxy `combat.encounter_resolved`) — подтвердить контрактом 029 | TKT-M8-016 (мост-тесты) частично | arch | до Wave 5 review |
+| OQ-03 | Источник ранений до выхода 029 (proxy `combat.encounter_resolved`) — подтвердить контрактом 029 | TKT-M22-016 (мост-тесты) частично | arch | до Wave 5 review |
 | OQ-04 | ~~Вводить ли ядерную тему `party.tick_advanced`~~ — закрыто при сверке с кодом Wave 0: тактовое исполнение идёт через `TickScheduler → IMechanicRuntime.tickScope('party')`, отдельная тема не вводится (§6.1, §7.3) | нет | arch | закрыто 2026-11-04 |
 | OQ-05 | Нелинейные (ветвящиеся) личные арки — перенести формализм в 034 | нет | design | до Wave 6 |
 | OQ-06 | Локационный фильтр реакций (напарник рядом с узлом катаклизма) зависит от world-position контракта 023 | AC17 partial-реализация | arch | до Wave 5 review |
@@ -869,27 +869,27 @@ Invariant: PARTY-INV-06…11.
 
 ## 17. Трассировка на DESIGN
 
-| DESIGN-блок | Требование | AC | Тест | Ожидаемый TKT (M8) |
+| DESIGN-блок | Требование | AC | Тест | Ожидаемый TKT (M22) |
 |---|---|---|---|---|
-| SPEC-PARTY-001/002/004 | R01/R03 | AC01,AC02,AC04 | T01,T06 | M8-001,004,005 |
-| SPEC-PARTY-003 | R02 | AC03 | T06,T08 | M8-003,016 |
-| SPEC-PARTY-005 | R04 | AC05,AC06 | T01,T06 | M8-006,014 |
-| SPEC-PARTY-006 | R05 | AC07,AC08 | T03 | M8-008 |
-| SPEC-PARTY-007/022 | R06 | AC09,AC10 | T05,T09 | M8-007,017 |
-| SPEC-PARTY-008 | R07 | AC11,AC12 | T02,T07 | M8-009,010 |
-| SPEC-PARTY-009/021/023 | R08/R11 | AC13,AC14,AC19 | T01,T11 | M8-002,011 |
-| SPEC-PARTY-010 | R09 | AC15,AC16 | T04,T07 | M8-010,016 |
-| SPEC-PARTY-011 | R10 | AC17,AC18 | T08 | M8-012,013 |
-| SPEC-PARTY-013/030/031 | R12 | AC20,AC21 | T10 | M8-015 |
-| SPEC-PARTY-032 | §9.3 | AC03,AC16,AC17 | T08 | M8-016 |
-| SPEC-PARTY-014/040/041 | R13/R17 | AC22,AC27 | T12,T13 | M8-018,019 |
-| SPEC-PARTY-015/024/050/051 | R14 | AC23,AC24 | T12 | M8-005,018 |
-| SPEC-PARTY-016/060…063 | R15 | AC25 | T09,T15,T16 | M8-020 |
-| SPEC-PARTY-070/071/080 | R16 | AC26 | T14 | M8-017,021 |
-| GD-07/08/09 | §4,§5.4,§6 | AC01,AC23 | T09,T12 | M8-001,018 |
-| INT-21/22/30/33.5 | весь документ | AC26 | T14 | M8-021 |
+| SPEC-PARTY-001/002/004 | R01/R03 | AC01,AC02,AC04 | T01,T06 | M22-001,004,005 |
+| SPEC-PARTY-003 | R02 | AC03 | T06,T08 | M22-003,016 |
+| SPEC-PARTY-005 | R04 | AC05,AC06 | T01,T06 | M22-006,014 |
+| SPEC-PARTY-006 | R05 | AC07,AC08 | T03 | M22-008 |
+| SPEC-PARTY-007/022 | R06 | AC09,AC10 | T05,T09 | M22-007,017 |
+| SPEC-PARTY-008 | R07 | AC11,AC12 | T02,T07 | M22-009,010 |
+| SPEC-PARTY-009/021/023 | R08/R11 | AC13,AC14,AC19 | T01,T11 | M22-002,011 |
+| SPEC-PARTY-010 | R09 | AC15,AC16 | T04,T07 | M22-010,016 |
+| SPEC-PARTY-011 | R10 | AC17,AC18 | T08 | M22-012,013 |
+| SPEC-PARTY-013/030/031 | R12 | AC20,AC21 | T10 | M22-015 |
+| SPEC-PARTY-032 | §9.3 | AC03,AC16,AC17 | T08 | M22-016 |
+| SPEC-PARTY-014/040/041 | R13/R17 | AC22,AC27 | T12,T13 | M22-018,019 |
+| SPEC-PARTY-015/024/050/051 | R14 | AC23,AC24 | T12 | M22-005,018 |
+| SPEC-PARTY-016/060…063 | R15 | AC25 | T09,T15,T16 | M22-020 |
+| SPEC-PARTY-070/071/080 | R16 | AC26 | T14 | M22-017,021 |
+| GD-07/08/09 | §4,§5.4,§6 | AC01,AC23 | T09,T12 | M22-001,018 |
+| INT-21/22/30/33.5 | весь документ | AC26 | T14 | M22-021 |
 
-Итог декомпозиции (предварительный, уточняется TICKET-TEMPLATE): 21 тикет `TKT-M8-001…021`, веха `TICKETS-M8 v1.0 — «Party Management»` (Wave 5, демо `demo:m8`). Каталог тикетов создаётся после перевода спеки в статус `approved`.
+Итог декомпозиции (предварительный, уточняется TICKET-TEMPLATE): 21 тикет `TKT-M22-001…021`, веха `TICKETS-M22 v1.0 — «Party Management»` (Wave 5, демо `demo:m22`). Каталог тикетов создаётся после перевода спеки в статус `approved`.
 
 ---
 
@@ -897,7 +897,7 @@ Invariant: PARTY-INV-06…11.
 
 - ✅ секции шаблона 1–17 присутствуют, нумерация сохранена; неприменимых секций нет (§0 добавлен как служебная, не нарушает 1–17);
 - ✅ все TS-интерфейсы и типы зафиксированы (§5, §8.1);
-- ✅ JSON Schema: перечень + ключевые ограничения (§6.2); полные тела — artifact TKT-M8-001;
+- ✅ JSON Schema: перечень + ключевые ограничения (§6.2); полные тела — artifact TKT-M22-001;
 - ✅ state machines / sequence diagrams описаны (§7.1, §7.2);
 - ✅ порты и адаптеры имеют контракты + заглушки (§8);
 - ✅ ошибки — только `Result<T,E>` (§8.3, §10);
