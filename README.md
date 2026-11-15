@@ -32,6 +32,18 @@ bun run demo:m19    # (W4) мировые события и локации
 bun run demo:m20    # (W4) катаклизмы: lifecycle и escalation
 bun run demo:m21    # (W4) катаклизмы: эффекты и шрамы
 bun run demo:m22    # (W5) отряд: найм, экипировка, мораль, зарплата
+bun run demo:m23    # (W5) напарники: отношения, синергия, наследие
+bun run demo:m24    # (W5) бой: фазы, слои урона, потери, развязка
+bun run demo:m25    # (W5) дуэль: фехтование, доктрины, абордаж
+bun run demo:m26    # (W5) поле боя: элита, влияние дуэли, развязка
+bun run demo:m27    # (W6) капитан: старение, репутация, клятвы, пенсия
+bun run demo:m28    # (W6) скрытые ветки: триггер → древо → финал
+bun run demo:m29    # (W6) нарратив: пролог, вехи, арки, диалоги
+bun run demo:m30    # (W6) лор: фрагменты, слои раскрытия, ключевые NPC
+bun run demo:m31    # (W7) эпилог: факты → нити → текст → выбор
+bun run demo:m32    # (W7) мета-угроза: выбор → угроза → перенос
+bun run demo:m33    # (W8) авторинг контента: скаффолд → lint → preview
+bun run demo:m34    # (W8) вертикальный срез: полный забег + чекпоинты
 
 bun run trace:build # карта трассировки .workflow → trace/dist/index.html
 bun run trace:check # то же + код 1 при разрывах уровня error
@@ -72,7 +84,7 @@ src/
 content/          # packs, events/core.json (30 событий), mechanics/stubs.json (3 stub), schemas (8), locales (en/ru), cross-refs
 tools/ci/         # кли ci:validate, reporters, стадии, правила gameplay, fixtures
 tools/trace/      # сборка карты трассировки .workflow
-.workflow/        # INTENT → GENERAL DESIGN → DESIGN (10) → DEV-SPEC (27) → тикеты (267: M1–M22, Waves 0–5)
+.workflow/        # INTENT → GENERAL DESIGN → DESIGN (10) → DEV-SPEC (39) → тикеты (389: M1–M34, Waves 0–8)
 test/             # unit + contract тесты
 ```
 
@@ -89,14 +101,13 @@ test/             # unit + contract тесты
 
 ## Состояние документации
 
-Статусы `.workflow` актуализированы по коду 2026-11-14:
+Статусы `.workflow` актуализированы 2026-11-15:
 
 - `INTENT` и `GENERAL DESIGN` — утверждены;
 - 10 документов `DESIGN v1.0` — ✅ утверждено;
 - `DEV-SPEC-001…009` (Wave 0) — ✅ реализовано, подтверждено `bun run t:check` и `bun run ci:validate`;
-- тикеты M1–M4 (82) — ✅ выполнено; M5–M7 (56) — ⏳ не начато; M8–M22 (185) — ⏳ не начато (тикеты созданы).
-- `DEV-SPEC-010…027` — draft, тикеты созданы, реализации ещё нет.
-- Спеки `DEV-SPEC-028…039` — ещё не созданы; тикеты для Waves 6–8 не создаются (0 тикетов).
+- тикеты M1–M4 (82) — ✅ выполнено; M5–M7 (56) — ⏳ не начато; M8–M34 (307) — ⏳ не начато (тикеты созданы).
+- `DEV-SPEC-010…039` — draft, тикеты созданы (M8–M34), реализации ещё нет.
 
 Подробности и отклонения реализации — в `TICKETS-OVERVIEW` (§12) и `DEV-SPEC-OVERVIEW` (§9).
 
