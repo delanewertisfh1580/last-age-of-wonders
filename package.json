@@ -35,6 +35,7 @@
     "demo:m24": "bun scripts/demo-m24.ts",
     "demo:m25": "bun scripts/demo-m25.ts",
     "demo:m26": "bun scripts/demo-m26.ts",
+    "demo:m27": "bun scripts/demo-m27.ts",
     "trace:build": "bun tools/trace/build-trace.ts",
     "trace:check": "bun tools/trace/build-trace.ts --strict"
   },
