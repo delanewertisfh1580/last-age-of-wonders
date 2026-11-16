@@ -18,6 +18,7 @@
     "demo:m7": "bun scripts/demo-m7.ts",
     "demo:m8": "bun scripts/demo-m8.ts",
     "demo:m9": "bun scripts/demo-m9.ts",
+    "demo:m10": "bun scripts/demo-m10.ts",
     "trace:build": "bun tools/trace/build-trace.ts",
     "trace:check": "bun tools/trace/build-trace.ts --strict"
   },
