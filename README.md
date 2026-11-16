@@ -1,6 +1,6 @@
 # «Наука против Магии» — walking skeleton (Wave 0)
 
-«Наука против Магии» — тикеты для всех волн (M1–M22), 267 тикетов. Wave 0 реализован (82 тикета), Waves 1–5 — планирование (185 тикетов). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema.
+«Наука против Магии» — вертикальный срез первой сборки: все волны M1–M34 реализованы (389 тикетов). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema, детерминированный RNG и headless-срез `demo:m34`.
 
 ## Скрипты
 
@@ -46,7 +46,8 @@ bun run demo:m33    # (W8) авторинг контента: скаффолд �
 bun run demo:m34    # (W8) вертикальный срез: полный забег + чекпоинты
 
 bun run trace:build # карта трассировки .workflow → trace/dist/index.html
-bun run trace:check # то же + код 1 при разрывах уровня error
+bun run content:check # авторинг-линт контента: поля, ключи, граф
+bun run trace:check   # то же + код 1 при разрывах уровня error
 ```
 
 ## Как проверить M2
@@ -79,6 +80,7 @@ src/
   infrastructure/ # реализации: eventbus, ajv-валидатор, json/md in-memory реестры, rng, save-репозитории, clock, локализация, механики
   application/    # use cases (Save/Load/List/Delete)
   bootstrap/      # GameBootstrap + загрузка схем
+  app/slice/      # вертикальный срез: 10 шагов, 6 чекпоинтов, отчёт, швы
   shared/         # Logger, EventType/DomainEvent/DeliveryPolicy, бренды потока
   scripts → scripts/ # демо M2/M3/full
 content/          # packs, events/core.json (30 событий), mechanics/stubs.json (3 stub), schemas (8), locales (en/ru), cross-refs
@@ -101,13 +103,12 @@ test/             # unit + contract тесты
 
 ## Состояние документации
 
-Статусы `.workflow` актуализированы 2026-11-15:
+Статусы `.workflow` актуализированы 2026-11-16:
 
 - `INTENT` и `GENERAL DESIGN` — утверждены;
 - 10 документов `DESIGN v1.0` — ✅ утверждено;
-- `DEV-SPEC-001…009` (Wave 0) — ✅ реализовано, подтверждено `bun run t:check` и `bun run ci:validate`;
-- тикеты M1–M4 (82) — ✅ выполнено; M5–M7 (56) — ⏳ не начато; M8–M34 (307) — ⏳ не начато (тикеты созданы).
-- `DEV-SPEC-010…039` — draft, тикеты созданы (M8–M34), реализации ещё нет.
+- `DEV-SPEC-001…039` — ✅ реализовано в объёме первой сборки;
+- тикеты M1–M34 (389) — ✅ выполнено, подтверждено `bun run t:check` (225 тестов), `bun run ci:validate` (8/8 стадий), `bun run demo:m34`.
 
 Подробности и отклонения реализации — в `TICKETS-OVERVIEW` (§12) и `DEV-SPEC-OVERVIEW` (§9).
 

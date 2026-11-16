@@ -3,4 +3,5 @@ dist/
 ci-report.json
 coverage/
 trace/dist/
+artifacts/
 *.log
