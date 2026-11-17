@@ -1,11 +1,12 @@
-import { PORTS } from './campaign.js';
-import { STANCES, type GameSession, type GameView, type GoodView } from './GameSession.js';
+import { COMPANIONS } from './companions.js';
+import type { GameSession, GameView, GoodView } from './GameSession.js';
 
 export interface UiState {
   readonly session: GameSession | null;
   readonly screen: 'start' | 'game';
   readonly hasSave: boolean;
   readonly message: { readonly text: string; readonly tone: 'ok' | 'bad' } | null;
+  readonly enemyName?: string | null;
 }
 
 function money(value: number): string {
@@ -18,28 +19,19 @@ function pct(value: number, max: number): number {
 }
 
 function bar(value: number, max: number, tone: 'hull' | 'cargo'): string {
-  return `<span class="bar bar--${tone}"><span class="bar__fill" style="width:${pct(value, max)}%"></span></span>`;
+  return `<span class="bar bar--${tone}"><span class="bar__fill" data-bar="${tone}" style="width:${pct(value, max)}%"></span></span>`;
 }
-
-const ROUTES: readonly (readonly [string, string])[] = [
-  ['brasshaven', 'aetherport'],
-  ['brasshaven', 'grainreach'],
-  ['aetherport', 'ironcove'],
-  ['grainreach', 'veilmarket'],
-  ['ironcove', 'veilmarket'],
-  ['veilmarket', 'brasshaven'],
-];
 
 function startScreen(hasSave: boolean): string {
   return `
   <section class="screen start">
     <div class="start__glow" aria-hidden="true"></div>
     <header class="start__brand">
-      <span class="eyebrow">Вертикальный срез · торговый капитан</span>
+      <span class="eyebrow">Изометрическая кампания · торговый капитан</span>
       <h1>Наука<br />против <em>Магии</em></h1>
       <p class="lead">
-        Латунь и эфир делят одно море. Вы — капитан вольного судна: покупайте сырьё там,
-        где его избыток, продавайте там, где голод, и не дайте пиратам пустить корпус на щепы.
+        Латунь и эфир делят одно море. Пять живых городов, ночные доки, паруса и порох:
+        ведите судно между портами, торгуйте, нанимайте команду и уходите от пиратских залпов.
       </p>
       <div class="start__actions">
         <button class="btn btn--primary" data-action="new">Новая кампания</button>
@@ -50,12 +42,12 @@ function startScreen(hasSave: boolean): string {
     <aside class="start__howto">
       <h2>Как играть</h2>
       <ol>
-        <li><span>01</span> Открывайте рынок в порту и смотрите, где товар дёшев.</li>
-        <li><span>02</span> Переходите между портами — каждый день в море повышает риск.</li>
-        <li><span>03</span> В бою выбирайте тактику: залп, абордаж или уклонение.</li>
-        <li><span>04</span> Чините корпус и расширяйте трюм, пока золото позволяет.</li>
+        <li><span>01</span> На рынке ищите товар, который в этом порту дёшев, а в другом — в цене.</li>
+        <li><span>02</span> Клик по городу на карте — судно выходит в море. Переход занимает день.</li>
+        <li><span>03</span> В бою руль на A/D, ход на W/S, бортовой залп — Пробел. Стреляет только тот борт, что смотрит на врага.</li>
+        <li><span>04</span> Напарники меняют бой: штурман ускоряет руль, канонир — перезарядку, лекарь удешевляет ремонт.</li>
       </ol>
-      <p class="start__hint">Прогресс сохраняется в браузере автоматически после каждого действия.</p>
+      <p class="start__hint">Прогресс сохраняется в браузере автоматически в порту.</p>
     </aside>
   </section>`;
 }
@@ -73,10 +65,10 @@ function hud(view: GameView): string {
     <div class="hud__stats">
       <div class="stat">
         <span class="stat__label">Золото</span>
-        <span class="stat__value">${money(view.money)}</span>
+        <span class="stat__value" data-hud="money">${money(view.money)}</span>
       </div>
       <div class="stat stat--wide">
-        <span class="stat__label">Корпус ${view.hull}/${view.maxHull}</span>
+        <span class="stat__label">Корпус <span data-hud="hull-text">${view.hull}/${view.maxHull}</span></span>
         ${bar(view.hull, view.maxHull, 'hull')}
       </div>
       <div class="stat stat--wide">
@@ -99,62 +91,41 @@ function hud(view: GameView): string {
   </header>`;
 }
 
-function map(view: GameView): string {
-  const current = PORTS.find((port) => port.id === view.portId);
-  const routes = ROUTES.map(([from, to]) => {
-    const a = PORTS.find((port) => port.id === from);
-    const b = PORTS.find((port) => port.id === to);
-    if (!a || !b) return '';
-    const active = from === view.portId || to === view.portId;
-    return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" class="route${active ? ' route--active' : ''}" />`;
-  }).join('');
-
-  const ports = view.ports
-    .map((port) => {
-      const canTravel = view.status === 'port' && !port.current;
-      return `
-      <g class="port${port.current ? ' port--current' : ''}${canTravel ? ' port--target' : ''}"
-         ${canTravel ? `data-action="travel" data-port="${port.id}"` : ''}
-         tabindex="${canTravel ? '0' : '-1'}" role="${canTravel ? 'button' : 'presentation'}">
-        <circle class="port__halo" cx="${port.x}" cy="${port.y}" r="26" />
-        <circle class="port__dot" cx="${port.x}" cy="${port.y}" r="${port.current ? 8 : 5.5}" />
-        <text class="port__name" x="${port.x}" y="${port.y - 20}" text-anchor="middle">${port.name}</text>
-        <text class="port__tag" x="${port.x}" y="${port.y + 24}" text-anchor="middle">${port.tagline}</text>
-      </g>`;
-    })
-    .join('');
-
+function stage(view: GameView, enemyName: string | null | undefined): string {
+  const sailing = view.status === 'sailing' && view.voyage;
+  const combat = view.status === 'combat';
   return `
-  <section class="panel map-panel">
-    <div class="panel__head">
-      <h2>Море Латуни и Эфира</h2>
-      <span class="panel__note">${current ? current.tagline : ''}</span>
+  <div class="stage">
+    <canvas class="stage__canvas" data-canvas aria-label="Изометрическая карта моря"></canvas>
+    <div class="stage__hint" data-stage-hint>
+      ${sailing ? 'Судно в пути' : combat ? 'Бой' : 'Клик по городу — идти туда'}
     </div>
-    <svg class="map" viewBox="0 0 760 600" role="img" aria-label="Карта портов">
-      <defs>
-        <radialGradient id="seaGlow" cx="50%" cy="45%" r="65%">
-          <stop offset="0%" stop-color="#16344a" />
-          <stop offset="100%" stop-color="#0a121c" />
-        </radialGradient>
-        <pattern id="graticule" width="48" height="48" patternUnits="userSpaceOnUse">
-          <path d="M48 0H0V48" fill="none" stroke="rgba(201,162,39,0.10)" stroke-width="1" />
-        </pattern>
-      </defs>
-      <rect width="760" height="600" fill="url(#seaGlow)" />
-      <rect width="760" height="600" fill="url(#graticule)" />
-      ${routes}
-      ${ports}
-      ${
-        current
-          ? `<g class="ship-marker">
-              <circle cx="${current.x}" cy="${current.y}" r="15" />
-              <text x="${current.x}" y="${current.y + 5}" text-anchor="middle">⚓</text>
-            </g>`
-          : ''
-      }
-    </svg>
-    <p class="map__legend">Клик по порту — идти туда. Каждый переход занимает день и может привести к бою.</p>
-  </section>`;
+    ${
+      sailing && view.voyage
+        ? `<div class="voyage">
+            <span class="voyage__label">Курс: ${view.voyage.fromName} → ${view.voyage.toName}</span>
+            <span class="bar bar--cargo voyage__bar"><span class="bar__fill" data-voyage-bar style="width:${pct(view.voyage.progress, 1)}%"></span></span>
+            <span class="voyage__note">${view.voyage.danger ? 'В тумане слышны барабаны…' : 'Море спокойно'}</span>
+          </div>`
+        : ''
+    }
+    ${
+      combat
+        ? `<div class="battle-banner">
+            <span class="eyebrow">Бой</span>
+            <strong>${enemyName ?? 'Пираты'}</strong>
+            <span class="battle-banner__hint">A/D — руль · W/S — ход · Пробел — залп</span>
+          </div>
+          <div class="touch-controls">
+            <button class="touch" data-hold="left">◀</button>
+            <button class="touch" data-hold="right">▶</button>
+            <button class="touch" data-hold="back">▽</button>
+            <button class="touch" data-hold="forward">△</button>
+            <button class="touch touch--fire" data-hold="fire">🔥 Залп</button>
+          </div>`
+        : ''
+    }
+  </div>`;
 }
 
 function goodsRows(view: GameView): string {
@@ -169,10 +140,10 @@ function goodsRows(view: GameView): string {
         <td class="num price-sell">${money(good.sell)}</td>
         <td class="num">${good.qty}</td>
         <td class="goods__actions">
-          <button class="chip" data-action="buy" data-good="${good.id}" data-qty="1" ${maxBuy < 1 ? 'disabled' : ''}>Купить 1</button>
-          <button class="chip" data-action="buy" data-good="${good.id}" data-qty="5" ${maxBuy < 5 ? 'disabled' : ''}>Купить 5</button>
-          <button class="chip chip--sell" data-action="sell" data-good="${good.id}" data-qty="1" ${good.qty < 1 ? 'disabled' : ''}>Продать 1</button>
-          <button class="chip chip--sell" data-action="sell" data-good="${good.id}" data-qty="${good.qty}" ${good.qty < 1 ? 'disabled' : ''}>Всё</button>
+          <button class="chip" data-action="buy" data-good="${good.id}" data-qty="1" ${maxBuy < 1 ? 'disabled' : ''}>+1</button>
+          <button class="chip" data-action="buy" data-good="${good.id}" data-qty="5" ${maxBuy < 5 ? 'disabled' : ''}>+5</button>
+          <button class="chip chip--sell" data-action="sell" data-good="${good.id}" data-qty="1" ${good.qty < 1 ? 'disabled' : ''}>−1</button>
+          <button class="chip chip--sell" data-action="sell" data-good="${good.id}" data-qty="${good.qty}" ${good.qty < 1 ? 'disabled' : ''}>всё</button>
         </td>
       </tr>`;
     })
@@ -180,8 +151,9 @@ function goodsRows(view: GameView): string {
 }
 
 function portPanel(view: GameView): string {
+  if (view.status !== 'port') return '';
   return `
-  <section class="panel port-panel">
+  <section class="panel market-panel">
     <div class="panel__head">
       <h2>${view.portName}</h2>
       <span class="panel__note">${view.tagline}</span>
@@ -201,19 +173,45 @@ function portPanel(view: GameView): string {
     </table>
     <div class="port-actions">
       <button class="btn" data-action="repair" ${view.repairCost === 0 ? 'disabled' : ''}>
-        Ремонт корпуса${view.repairCost > 0 ? ` · ${money(view.repairCost)}` : ''}
+        Ремонт${view.repairCost > 0 ? ` · ${money(view.repairCost)}` : ''}
       </button>
       <button class="btn" data-action="upgrade" ${view.upgradeCost === 0 ? 'disabled' : ''}>
-        ${view.upgradeCost === 0 ? 'Трюм максимален' : `Расширить трюм · ${money(view.upgradeCost)}`}
+        ${view.upgradeCost === 0 ? 'Трюм максимален' : `Трюм +4 · ${money(view.upgradeCost)}`}
       </button>
     </div>
   </section>`;
 }
 
+function crewPanel(view: GameView): string {
+  const cards = COMPANIONS.map((companion) => {
+    const entry = view.companions.find((item) => item.id === companion.id);
+    const owned = entry?.owned ?? false;
+    return `
+      <li class="crew${owned ? ' crew--owned' : ''}">
+        <span class="crew__icon">${companion.icon}</span>
+        <div class="crew__body">
+          <span class="crew__name">${companion.name}</span>
+          <span class="crew__perk">${companion.perk}</span>
+        </div>
+        ${
+          owned
+            ? '<span class="crew__badge">в команде</span>'
+            : `<button class="chip" data-action="recruit" data-companion="${companion.id}" ${entry?.affordable ? '' : 'disabled'}>${companion.cost}</button>`
+        }
+      </li>`;
+  }).join('');
+  return `
+  <section class="panel crew-panel">
+    <div class="panel__head">
+      <h2>Команда</h2>
+      <span class="panel__note">${view.companions.filter((item) => item.owned).length} / ${COMPANIONS.length}</span>
+    </div>
+    <ul class="crew-list">${cards}</ul>
+  </section>`;
+}
+
 function logPanel(view: GameView): string {
-  const entries = view.log
-    .map((line) => `<li>${line}</li>`)
-    .join('');
+  const entries = view.log.map((line) => `<li>${line}</li>`).join('');
   return `
   <section class="panel log-panel">
     <div class="panel__head">
@@ -224,40 +222,6 @@ function logPanel(view: GameView): string {
   </section>`;
 }
 
-function combatOverlay(view: GameView): string {
-  const encounter = view.encounter;
-  if (!encounter) return '';
-  const stances = STANCES.map(
-    (stance) => `
-      <button class="stance" data-action="strike" data-stance="${stance.id}">
-        <span class="stance__label">${stance.label}</span>
-        <span class="stance__hint">${stance.hint}</span>
-      </button>`,
-  ).join('');
-  return `
-  <div class="overlay">
-    <section class="combat card">
-      <span class="eyebrow">Бой · раунд ${encounter.round} · ${encounter.phaseLabel}</span>
-      <h2>${encounter.enemyName}</h2>
-      <div class="combat__ships">
-        <div class="ship-card">
-          <span class="ship-card__name">Ваше судно</span>
-          <span class="ship-card__hp">${encounter.playerHp} / ${view.maxHull}</span>
-          ${bar(encounter.playerHp, view.maxHull, 'hull')}
-        </div>
-        <span class="combat__vs">⚔</span>
-        <div class="ship-card ship-card--enemy">
-          <span class="ship-card__name">Пираты</span>
-          <span class="ship-card__hp">${encounter.enemyHp} / ${encounter.enemyMaxHp}</span>
-          ${bar(encounter.enemyHp, encounter.enemyMaxHp, 'hull')}
-        </div>
-      </div>
-      <div class="stances">${stances}</div>
-      <p class="combat__loot">За победу: ~${money(encounter.loot)} золота трофеев.</p>
-    </section>
-  </div>`;
-}
-
 function gameoverOverlay(view: GameView): string {
   if (view.status !== 'gameover') return '';
   return `
@@ -265,7 +229,7 @@ function gameoverOverlay(view: GameView): string {
     <section class="card gameover">
       <span class="eyebrow">Кампания завершена</span>
       <h2>Корпус разбит</h2>
-      <p class="lead">Судно легло на дно на ${view.day}-й день. Трофеев за рейс: ${view.sunk} побед, итог ${view.profit >= 0 ? '+' : ''}${money(view.profit)} золота.</p>
+      <p class="lead">Судно легло на дно на ${view.day}-й день. Побед: ${view.sunk}. Итог: ${view.profit >= 0 ? '+' : ''}${money(view.profit)} золота.</p>
       <div class="gameover__actions">
         <button class="btn btn--primary" data-action="restart">Новая кампания</button>
         <button class="btn" data-action="menu">В меню</button>
@@ -274,16 +238,16 @@ function gameoverOverlay(view: GameView): string {
   </div>`;
 }
 
-function gameScreen(view: GameView): string {
+function gameScreen(view: GameView, enemyName: string | null | undefined): string {
   return `
   <section class="screen game">
     ${hud(view)}
-    <div class="board">
-      ${map(view)}
+    ${stage(view, enemyName)}
+    <div class="dock${view.status === 'port' ? '' : ' dock--solo'}">
       ${portPanel(view)}
+      ${view.status === 'port' ? crewPanel(view) : ''}
       ${logPanel(view)}
     </div>
-    ${combatOverlay(view)}
     ${gameoverOverlay(view)}
   </section>`;
 }
@@ -298,5 +262,23 @@ export function render(root: HTMLElement, state: UiState): void {
     root.innerHTML = `${startScreen(state.hasSave)}${toast(state)}`;
     return;
   }
-  root.innerHTML = `${gameScreen(state.session.view())}${toast(state)}`;
+  root.innerHTML = `${gameScreen(state.session.view(), state.enemyName)}${toast(state)}`;
+}
+
+/** Точечное обновление HUD во время плавания/боя — без полного ререндера. */
+export function updateLiveHud(root: HTMLElement, hull: number, maxHull: number, voyageProgress: number | null): void {
+  const hullText = root.querySelector<HTMLElement>('[data-hud="hull-text"]');
+  if (hullText) hullText.textContent = `${hull}/${maxHull}`;
+  const barFill = root.querySelector<HTMLElement>('[data-bar="hull"]');
+  if (barFill) barFill.style.width = `${pct(hull, maxHull)}%`;
+  if (voyageProgress !== null) {
+    const voyageBar = root.querySelector<HTMLElement>('[data-voyage-bar]');
+    if (voyageBar) voyageBar.style.width = `${Math.round(Math.min(1, Math.max(0, voyageProgress)) * 100)}%`;
+  }
+}
+
+/** Убирает подсказку «клик по городу», когда сессия уже в море. */
+export function setStageHint(root: HTMLElement, text: string): void {
+  const hint = root.querySelector<HTMLElement>('[data-stage-hint]');
+  if (hint) hint.textContent = text;
 }

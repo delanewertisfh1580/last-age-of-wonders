@@ -7,14 +7,6 @@ import {
   type InventoryState,
   type MarketState,
 } from '../../domain/economy/Economy.js';
-import {
-  advancePhase,
-  calculateDamage,
-  createCombatant,
-  createEncounter,
-  type EncounterPhase,
-  type EncounterState,
-} from '../../domain/naval/NavalCombat.js';
 import type { IRngService } from '../../domain/rng/IRngService.js';
 import type { RngStreamName } from '../../domain/rng/RngStreamName.js';
 import type { RngStreamState } from '../../domain/rng/RngStreamState.js';
@@ -33,62 +25,42 @@ import {
   START_PORT,
   createPortMarkets,
 } from './campaign.js';
+import { COMPANIONS, COMPANION_BY_ID, companionEffects, type CompanionDef } from './companions.js';
 
-export type GameStatus = 'port' | 'combat' | 'gameover';
-export type Stance = 'broadside' | 'boarding' | 'evade';
+export type GameStatus = 'port' | 'sailing' | 'combat' | 'gameover';
 
 export interface ActionResult {
   readonly ok: boolean;
   readonly message: string;
 }
 
-export interface StanceSpec {
-  readonly id: Stance;
-  readonly label: string;
-  readonly hint: string;
-  readonly damageOut: number;
-  readonly damageIn: number;
+/** Переход между портами: рендер анимирует progress, сессия решает исход. */
+export interface Voyage {
+  readonly from: string;
+  readonly to: string;
+  readonly danger: boolean;
+  progress: number;
+}
+
+export interface PendingCombat {
+  readonly enemyName: string;
+  readonly enemyHp: number;
+  readonly enemyPower: number;
+  readonly enemyArmor: number;
+  readonly loot: number;
+}
+
+export interface CombatSetup extends PendingCombat {
+  readonly playerHull: number;
+  readonly playerMaxHull: number;
+  readonly playerPower: number;
+  readonly playerArmor: number;
+  readonly turnMultiplier: number;
+  readonly reloadMultiplier: number;
   readonly doctrine: number;
 }
 
-/** Три тактики на раунд: урон/риск. Значения — множители к слоям урона ядра. */
-export const STANCES: readonly StanceSpec[] = [
-  {
-    id: 'broadside',
-    label: 'Борт о борт',
-    hint: 'Ровный обмен залпами',
-    damageOut: 1,
-    damageIn: 1,
-    doctrine: 0.15,
-  },
-  {
-    id: 'boarding',
-    label: 'Абордаж',
-    hint: 'Больше урона, больше риска',
-    damageOut: 1.45,
-    damageIn: 1.35,
-    doctrine: 0.25,
-  },
-  {
-    id: 'evade',
-    label: 'Уклонение',
-    hint: 'Меньше урона с обеих сторон',
-    damageOut: 0.45,
-    damageIn: 0.4,
-    doctrine: 0,
-  },
-];
-
-export const STANCE_BY_ID: Readonly<Record<Stance, StanceSpec>> = Object.fromEntries(
-  STANCES.map((stance) => [stance.id, stance]),
-) as Readonly<Record<Stance, StanceSpec>>;
-
-export const PHASE_LABEL: Readonly<Record<EncounterPhase, string>> = {
-  approach: 'Сближение',
-  broadside: 'Перестрелка',
-  boarding: 'Абордаж',
-  resolved: 'Исход',
-};
+export const VOYAGE_SECONDS = 2.8;
 
 const ENEMY_NAMES: readonly string[] = [
   '«Соляной Кит»',
@@ -108,8 +80,9 @@ export interface SessionSnapshot {
   readonly maxHull: number;
   readonly cargoCapacity: number;
   readonly status: GameStatus;
-  readonly encounter: EncounterState | null;
-  readonly enemyMaxHp: number;
+  readonly voyage?: Voyage | null;
+  readonly combat?: PendingCombat | null;
+  readonly companions?: readonly string[];
   readonly log: readonly string[];
   readonly sunk: number;
   readonly profit: number;
@@ -135,15 +108,22 @@ export interface PortView {
   readonly current: boolean;
 }
 
-export interface EncounterView {
-  readonly enemyName: string;
-  readonly playerHp: number;
-  readonly enemyHp: number;
-  readonly enemyMaxHp: number;
-  readonly round: number;
-  readonly phase: EncounterPhase;
-  readonly phaseLabel: string;
-  readonly loot: number;
+export interface CompanionView {
+  readonly id: string;
+  readonly name: string;
+  readonly role: string;
+  readonly perk: string;
+  readonly icon: string;
+  readonly cost: number;
+  readonly owned: boolean;
+  readonly affordable: boolean;
+}
+
+export interface VoyageView {
+  readonly fromName: string;
+  readonly toName: string;
+  readonly progress: number;
+  readonly danger: boolean;
 }
 
 export interface GameView {
@@ -160,11 +140,13 @@ export interface GameView {
   readonly goods: readonly GoodView[];
   readonly ports: readonly PortView[];
   readonly log: readonly string[];
-  readonly encounter: EncounterView | null;
+  readonly voyage: VoyageView | null;
   readonly sunk: number;
   readonly profit: number;
   readonly repairCost: number;
+  readonly repairCostPerPoint: number;
   readonly upgradeCost: number;
+  readonly companions: readonly CompanionView[];
   readonly seed: string;
 }
 
@@ -181,14 +163,14 @@ function round2(value: number): number {
 }
 
 /**
- * Игровая сессия браузерной демо-кампании: торговля, переходы между портами,
- * морской бой. Использует доменные функции ядра (экономика + морской бой),
- * сериализуется в SessionSnapshot.
+ * Игровая сессия кампании: торговля, плавание с анимацией, бой и напарники.
+ * Боевая математика — в BattleSim, здесь только состояние кампании и награды.
  */
 export class GameSession {
   private readonly rng: IRngService;
   private markets: Map<string, MarketState>;
   private inventory: InventoryState;
+  private companions: string[];
 
   day: number;
   portId: string;
@@ -196,8 +178,8 @@ export class GameSession {
   readonly maxHull: number;
   cargoCapacity: number;
   status: GameStatus;
-  encounter: EncounterState | null;
-  enemyMaxHp: number;
+  voyage: Voyage | null;
+  combat: PendingCombat | null;
   log: string[];
   sunk: number;
   profit: number;
@@ -208,14 +190,15 @@ export class GameSession {
     this.rng = new WebRngService(seed);
     this.markets = createPortMarkets();
     this.inventory = createInventory(START_MONEY);
+    this.companions = [];
     this.day = 1;
     this.portId = START_PORT;
     this.hull = MAX_HULL;
     this.maxHull = MAX_HULL;
     this.cargoCapacity = START_CARGO;
     this.status = 'port';
-    this.encounter = null;
-    this.enemyMaxHp = 0;
+    this.voyage = null;
+    this.combat = null;
     this.log = ['Капитан, судно в Латунной Гавани. Трюм пуст, касса звенит.'];
     this.sunk = 0;
     this.profit = 0;
@@ -225,7 +208,10 @@ export class GameSession {
     return new GameSession(seed);
   }
 
-  static fromSnapshot(snapshot: SessionSnapshot, rngStates?: Record<string, RngStreamState>): GameSession {
+  static fromSnapshot(
+    snapshot: SessionSnapshot,
+    rngStates?: Record<string, RngStreamState>,
+  ): GameSession {
     const session = new GameSession(snapshot.seed);
     session.day = snapshot.day;
     session.portId = PORT_BY_ID[snapshot.portId] ? snapshot.portId : START_PORT;
@@ -235,11 +221,7 @@ export class GameSession {
     };
     session.hull = snapshot.hull;
     session.cargoCapacity = snapshot.cargoCapacity;
-    session.status = snapshot.status;
-    session.encounter = snapshot.encounter
-      ? (JSON.parse(JSON.stringify(snapshot.encounter)) as EncounterState)
-      : null;
-    session.enemyMaxHp = snapshot.enemyMaxHp;
+    session.companions = (snapshot.companions ?? []).filter((id) => COMPANION_BY_ID[id] !== undefined);
     session.log = [...snapshot.log];
     session.sunk = snapshot.sunk;
     session.profit = snapshot.profit;
@@ -254,7 +236,10 @@ export class GameSession {
         session.rng.restoreState(stream as RngStreamName, state);
       }
     }
-    if (session.status === 'combat' && !session.encounter) session.status = 'port';
+    // Переход и бой не сохраняются в процессе: возвращаемся в ближайший порт.
+    session.status = snapshot.status === 'gameover' ? 'gameover' : 'port';
+    session.voyage = null;
+    session.combat = null;
     return session;
   }
 
@@ -272,10 +257,9 @@ export class GameSession {
       maxHull: this.maxHull,
       cargoCapacity: this.cargoCapacity,
       status: this.status,
-      encounter: this.encounter
-        ? (JSON.parse(JSON.stringify(this.encounter)) as EncounterState)
-        : null,
-      enemyMaxHp: this.enemyMaxHp,
+      voyage: this.voyage ? { ...this.voyage } : null,
+      combat: this.combat ? { ...this.combat } : null,
+      companions: [...this.companions],
       log: [...this.log],
       sunk: this.sunk,
       profit: this.profit,
@@ -300,8 +284,20 @@ export class GameSession {
     return market;
   }
 
+  companionEffects() {
+    return companionEffects(this.companions);
+  }
+
+  ownsCompanion(id: string): boolean {
+    return this.companions.includes(id);
+  }
+
+  repairCostPerPoint(): number {
+    return round2(3 * (1 - this.companionEffects().repairDiscount));
+  }
+
   repairCost(): number {
-    return Math.max(0, this.maxHull - this.hull) * 3;
+    return round2(Math.max(0, this.maxHull - this.hull) * this.repairCostPerPoint());
   }
 
   upgradeCost(): number {
@@ -332,7 +328,24 @@ export class GameSession {
       y: entry.y,
       current: entry.id === this.portId,
     }));
-    const encounter = this.encounter;
+    const companions: CompanionView[] = COMPANIONS.map((companion: CompanionDef) => ({
+      id: companion.id,
+      name: companion.name,
+      role: companion.role,
+      perk: companion.perk,
+      icon: companion.icon,
+      cost: companion.cost,
+      owned: this.companions.includes(companion.id),
+      affordable: this.inventory.money >= companion.cost,
+    }));
+    const voyage = this.voyage
+      ? {
+          fromName: PORT_BY_ID[this.voyage.from]?.name ?? '—',
+          toName: PORT_BY_ID[this.voyage.to]?.name ?? '—',
+          progress: this.voyage.progress,
+          danger: this.voyage.danger,
+        }
+      : null;
     return {
       day: this.day,
       portId: this.portId,
@@ -347,29 +360,15 @@ export class GameSession {
       goods,
       ports,
       log: [...this.log].slice(-6).reverse(),
-      encounter:
-        encounter && this.status === 'combat'
-          ? {
-              enemyName: String(encounter.defender.id).replace(/^pirate:/, ''),
-              playerHp: encounter.attacker.hp,
-              enemyHp: encounter.defender.hp,
-              enemyMaxHp: this.enemyMaxHp,
-              round: encounter.round,
-              phase: encounter.phase,
-              phaseLabel: PHASE_LABEL[encounter.phase],
-              loot: this.lootForThisEncounter(),
-            }
-          : null,
+      voyage,
       sunk: this.sunk,
       profit: this.profit,
       repairCost: this.repairCost(),
+      repairCostPerPoint: this.repairCostPerPoint(),
       upgradeCost: this.upgradeCost(),
+      companions,
       seed: this.seed,
     };
-  }
-
-  private lootForThisEncounter(): number {
-    return 26 + this.day * 4;
   }
 
   buy(goodId: GoodId, qty: number): ActionResult {
@@ -424,10 +423,11 @@ export class GameSession {
   repair(): ActionResult {
     if (this.status !== 'port') return fail('Ремонт доступен в порту.');
     if (this.hull >= this.maxHull) return fail('Корпус цел, ремонт не нужен.');
+    const perPoint = this.repairCostPerPoint();
     const missing = this.maxHull - this.hull;
-    const affordable = Math.min(missing, Math.floor(this.inventory.money / 3));
+    const affordable = Math.min(missing, Math.floor(this.inventory.money / perPoint));
     if (affordable <= 0) return fail('Не хватает золота даже на одну секцию корпуса.');
-    const cost = affordable * 3;
+    const cost = round2(affordable * perPoint);
     this.inventory.money = round2(this.inventory.money - cost);
     this.hull += affordable;
     this.profit = round2(this.profit - cost);
@@ -447,102 +447,109 @@ export class GameSession {
     return okResult('Трюм расширен.');
   }
 
-  travel(portId: string): ActionResult {
-    if (this.status === 'combat') return fail('Сначала закончите бой.');
-    if (this.status === 'gameover') return fail('Кампания завершена.');
+  recruit(id: string): ActionResult {
+    if (this.status !== 'port') return fail('Нанимать можно только в порту.');
+    const companion = COMPANION_BY_ID[id];
+    if (!companion) return fail('Такого напарника нет.');
+    if (this.companions.includes(id)) return fail(`${companion.name} уже в команде.`);
+    if (this.inventory.money < companion.cost) return fail(`Нужно ${companion.cost} золота.`);
+    this.inventory.money = round2(this.inventory.money - companion.cost);
+    this.companions.push(id);
+    this.profit = round2(this.profit - companion.cost);
+    this.pushLog(`${companion.name} нанят(а) за ${companion.cost}. ${companion.perk}.`);
+    return okResult(`${companion.name} в команде.`);
+  }
+
+  /** Начать переход: обратного пути нет, но и бой решается по прибытии. */
+  setSail(portId: string): ActionResult {
+    if (this.status !== 'port') return fail('Сначала закончите текущее дело.');
     if (portId === this.portId) return fail('Вы уже в этом порту.');
     const target = PORT_BY_ID[portId];
     if (!target) return fail('Неизвестный порт.');
 
     this.day += 1;
-    const risk = Math.min(0.66, 0.32 + this.day * 0.006);
+    const risk = Math.min(0.62, 0.28 + this.day * 0.006);
     const roll = this.rng.chance(STREAM_NAMES['rng.economy.risk'], risk);
-    this.portId = portId;
-    if (roll.ok && roll.value) {
-      this.beginEncounter();
-      return fail('Из тумана выходит чужой парус!');
-    }
-    this.pushLog(`День ${this.day}: прибыли в ${target.name}.`);
-    return okResult(`Прибыли в ${target.name}.`);
+    this.voyage = {
+      from: this.portId,
+      to: portId,
+      danger: roll.ok && roll.value,
+      progress: 0,
+    };
+    this.status = 'sailing';
+    this.pushLog(`Отходим от ${PORT_BY_ID[this.portId]?.name ?? 'причала'} курсом на ${target.name}.`);
+    return okResult(`Курс на ${target.name}.`);
   }
 
-  private beginEncounter(): void {
+  /** Продвигает переход; вызывается из цикла рендера. */
+  tickVoyage(dt: number): 'sailing' | 'arrived' | 'ambush' {
+    const voyage = this.voyage;
+    if (!voyage || this.status !== 'sailing') return 'sailing';
+    voyage.progress = Math.min(1, voyage.progress + dt / VOYAGE_SECONDS);
+    if (voyage.progress < 1) return 'sailing';
+
+    this.portId = voyage.to;
+    const targetName = PORT_BY_ID[voyage.to]?.name ?? 'порту';
+    if (voyage.danger) {
+      this.status = 'combat';
+      this.combat = this.makeEnemy();
+      const enemy = this.combat;
+      this.voyage = null;
+      this.pushLog(`На траверзе ${enemy.enemyName}: палуба к бою!`);
+      return 'ambush';
+    }
+    this.status = 'port';
+    this.voyage = null;
+    this.pushLog(`День ${this.day}: ошвартовались в ${targetName}.`);
+    return 'arrived';
+  }
+
+  private makeEnemy(): PendingCombat {
     const nextInt = this.rng.nextInt(STREAM_NAMES['rng.combat.resolution'], 0, 4);
     const extra = nextInt.ok ? nextInt.value : 2;
-    const power = 9 + Math.floor(this.day / 5) + extra;
-    const enemyHp = Math.min(150, 52 + this.day * 3);
     const namePick = this.rng.pickOne(STREAM_NAMES['rng.narrative.npc_state'], ENEMY_NAMES);
-    const name = namePick.ok ? namePick.value : ENEMY_NAMES[0];
-
-    const player = createCombatant({
-      id: 'player',
-      hp: this.hull,
-      armor: SHIP_ARMOR,
-      power: SHIP_POWER,
-      morale: 1,
-      boarding: 1,
-    });
-    const enemy = createCombatant({
-      id: `pirate:${name}`,
-      hp: enemyHp,
-      armor: 1,
-      power,
-      morale: 1,
-      boarding: 1,
-    });
-    this.encounter = createEncounter(`enc-${this.day}`, player, enemy);
-    this.enemyMaxHp = enemyHp;
-    this.status = 'combat';
-    this.pushLog(`Пираты ${name} берут на абордаж курс. Корпус ${this.hull}/${this.maxHull}.`);
+    return {
+      enemyName: namePick.ok ? namePick.value : ENEMY_NAMES[0],
+      enemyHp: Math.min(150, 52 + this.day * 3),
+      enemyPower: 9 + Math.floor(this.day / 5) + extra,
+      enemyArmor: 1,
+      loot: 26 + this.day * 4,
+    };
   }
 
-  strike(stance: Stance): ActionResult {
-    const encounter = this.encounter;
-    if (!encounter || this.status !== 'combat') return fail('Сейчас нет боя.');
-    const spec = STANCE_BY_ID[stance];
-
-    const strikeResult = calculateDamage(encounter.attacker, encounter.defender, this.rng, spec.doctrine);
-    if (!strikeResult.ok) return fail(strikeResult.error.message);
-    const dealt = Math.max(1, Math.round(strikeResult.value.total * spec.damageOut));
-    encounter.defender.hp = Math.max(0, encounter.defender.hp - dealt);
-
-    const counterResult = calculateDamage(encounter.defender, encounter.attacker, this.rng);
-    const taken = counterResult.ok
-      ? Math.max(0, Math.round(counterResult.value.total * spec.damageIn))
-      : 0;
-    encounter.attacker.hp = Math.max(0, encounter.attacker.hp - taken);
-    encounter.round += 1;
-    this.hull = encounter.attacker.hp;
-
-    this.pushLog(`Раунд ${encounter.round} · ${spec.label}: нанесли ${dealt}, получили ${taken}.`);
-    if (encounter.phase !== 'boarding') advancePhase(encounter);
-
-    if (encounter.defender.hp <= 0) return this.winEncounter();
-    if (encounter.attacker.hp <= 0) return this.loseEncounter();
-
-    const enemyName = String(encounter.defender.id).replace(/^pirate:/, '');
-    return okResult(`${enemyName}: корпус ${encounter.defender.hp}/${this.enemyMaxHp}.`);
+  combatSetup(): CombatSetup | null {
+    if (this.status !== 'combat' || !this.combat) return null;
+    const effects = this.companionEffects();
+    return {
+      ...this.combat,
+      playerHull: this.hull,
+      playerMaxHull: this.maxHull,
+      playerPower: SHIP_POWER,
+      playerArmor: SHIP_ARMOR,
+      turnMultiplier: effects.turnMultiplier,
+      reloadMultiplier: effects.reloadMultiplier,
+      doctrine: 0.15 + effects.doctrineBonus,
+    };
   }
 
-  private winEncounter(): ActionResult {
-    const lootRoll = this.rng.nextInt(STREAM_NAMES['rng.economy.shocks'], 26 + this.day * 2, 48 + this.day * 4);
-    const loot = lootRoll.ok ? lootRoll.value : this.lootForThisEncounter();
+  /** Исход боя: корпус и трофеи переходят в состояние кампании. */
+  finishCombat(won: boolean, hullLeft: number): ActionResult {
+    if (this.status !== 'combat') return fail('Сейчас нет боя.');
+    const pending = this.combat;
+    this.combat = null;
+    this.hull = Math.max(0, Math.min(this.maxHull, Math.round(hullLeft)));
+    if (!won) {
+      this.hull = 0;
+      this.status = 'gameover';
+      this.pushLog('Корпус разбит. Кампания завершена — начните новую.');
+      return fail('Судно потоплено.');
+    }
+    const loot = pending?.loot ?? Math.round(26 + this.day * 4);
     this.inventory.money = round2(this.inventory.money + loot);
     this.profit = round2(this.profit + loot);
     this.sunk += 1;
-    this.encounter = null;
-    this.enemyMaxHp = 0;
     this.status = 'port';
     this.pushLog(`Противник потоплен. Трофеи: ${loot} золота, корпус ${this.hull}/${this.maxHull}.`);
     return okResult(`Победа! Трофеи: ${loot} золота.`);
-  }
-
-  private loseEncounter(): ActionResult {
-    this.hull = 0;
-    this.encounter = null;
-    this.enemyMaxHp = 0;
-    this.status = 'gameover';
-    this.pushLog('Корпус разбит. Кампания завершена — начните новую.');
-    return fail('Судно потоплено.');
   }
 }
