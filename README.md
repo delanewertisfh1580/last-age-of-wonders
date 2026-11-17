@@ -1,6 +1,28 @@
-# «Наука против Магии» — walking skeleton (Wave 0)
+# «Наука против Магии» — играбельный срез (+ headless-движок M1–M34)
 
-«Наука против Магии» — вертикальный срез первой сборки: все волны M1–M34 реализованы (389 тикетов). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema, детерминированный RNG и headless-срез `demo:m34`.
+«Наука против Магии» — вертикальный срез: все волны M1–M34 реализованы (389 тикетов). TypeScript, vitest, собственные форк примитивов (Result/AppError/Brand), ajv для JSON Schema, детерминированный RNG, headless-срез `demo:m34` и браузерная демо-кампания (`bun run dev`).
+
+## Браузерная демо-кампания
+
+Торговый капитан в море Латуни и Эфира: пять портов с разной экономикой, торговля, переходы с риском пиратского боя и три тактики на раунд. Приложение использует доменное ядро (`Economy`, `NavalCombat`, `LocalStorageSaveRepository`) вместо заглушек.
+
+```bash
+bun install
+bun run dev     # http://localhost:5173 — dev-сервер (порт берётся из PORT, если задан)
+bun run build   # статическая сборка в dist/
+bun run serve   # предпросмотр собранного dist/
+```
+
+Что внутри среза:
+
+- `src/app/web/GameSession.ts` — игровая сессия: сделки, переходы, бой, ремонт, расширение трюма, снапшот состояния.
+- `src/app/web/campaign.ts` — пять портов, товары (зерно, железо, эфир), стартовые параметры судна.
+- `src/app/web/persistence.ts` — сохранение в `localStorage` через существующий `SaveSnapshot` v1.
+- `src/app/web/view.ts`, `main.ts`, `styles.css` — vanilla-DOM UI: карта, HUD, рынок, журнал, оверлей боя.
+- `src/infrastructure/rng/WebRngService.ts` — браузерная реализация `IRngService` (без `node:crypto`, тот же xorshift128+).
+- `test/unit/web-session.test.ts`, `test/unit/web-view.test.ts` — 12 тестов игрового цикла и рендера.
+
+Сохранение автоматическое после каждого действия; «Сохранить» в HUD дублирует его вручную. Прогресс живёт в `localStorage` браузера.
 
 ## Скрипты
 
